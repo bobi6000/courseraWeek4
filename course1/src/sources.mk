@@ -12,7 +12,11 @@
 #Common files
 SRC_COMM = 				\
 	./main.c 			\
-	./memory.c			
+	./course1.c			\
+	./memory.c			\
+	./stats.c			\
+	./data.c						
+
 # MSP432 platform files
 SRC_MSP =				\
 	./interrupts_msp432p401r_gcc.c	\
@@ -20,7 +24,7 @@ SRC_MSP =				\
 	./system_msp432p401r.c
 
 # Common files
-INCLUD_COMM =   ../include/common
+INCLUD_COMM =  ../include/common
 # MSP432 platform files
 INCLUD_MSP =    ../include/msp432
 # ARM architecture files

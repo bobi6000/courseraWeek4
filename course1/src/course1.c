@@ -18,6 +18,7 @@
  */
 
 #include <stdint.h>
+#include <stdlib.h>
 #include "course1.h"
 #include "platform.h"
 #include "memory.h"
@@ -26,11 +27,12 @@
 
 int8_t test_data1() {
   uint8_t * ptr;
-  int32_t num = -4096;
+  int32_t num =  -4096;
   uint32_t digits;
   int32_t value;
 
   PRINTF("\ntest_data1();\n");
+
   ptr = (uint8_t*) reserve_words( DATA_SET_SIZE_W );
 
   if (! ptr )
@@ -38,7 +40,7 @@ int8_t test_data1() {
     return TEST_ERROR;
   }
 
-  digits = my_itoa( num, ptr, BASE_16);   
+  digits = my_itoa( num, ptr, BASE_16); 
   value = my_atoi( ptr, digits, BASE_16);
   #ifdef VERBOSE
   PRINTF("  Initial number: %d\n", num);
@@ -71,6 +73,7 @@ int8_t test_data2() {
   value = my_atoi( ptr, digits, BASE_10);
   #ifdef VERBOSE
   PRINTF("  Initial Decimal number: %d\n", num);
+  PRINTF("  Converting String: %s\n",ptr);
   PRINTF("  Final Decimal number: %d\n", value);
   #endif
   free_words( (uint32_t*)ptr );
@@ -119,6 +122,7 @@ int8_t test_memmove1() {
   }
 
   free_words( (uint32_t*)set );
+
   return ret;
 }
 
@@ -147,7 +151,6 @@ int8_t test_memmove2() {
   print_array(set, MEM_SET_SIZE_B);
   my_memmove(ptra, ptrb, TEST_MEMMOVE_LENGTH);
   print_array(set, MEM_SET_SIZE_B);
-
   for (i = 0; i < TEST_MEMMOVE_LENGTH; i++)
   {
     if (set[i + 8] != i)
@@ -346,4 +349,5 @@ void course1(void)
   PRINTF("  PASSED: %d / %d\n", (TESTCOUNT - failed), TESTCOUNT);
   PRINTF("  FAILED: %d / %d\n", failed, TESTCOUNT);
   PRINTF("--------------------------------\n");
+
 }

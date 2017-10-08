@@ -20,10 +20,11 @@
 #define __COURSE1_H__
 
 #include <stdint.h>
+#include <math.h>
 
 #define DATA_SET_SIZE_W (10)
 #define MEM_SET_SIZE_B  (32)
-#define MEM_SET_SIZE_W  (8)
+#define MEM_SET_SIZE_W  (64)
 #define MEM_ZERO_LENGTH (16)
 
 #define TEST_MEMMOVE_LENGTH (16)

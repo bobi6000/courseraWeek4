@@ -17,12 +17,14 @@
 #if defined (MSP432)
 #include "msp432p401r.h"
 #define PRINTF(...)
+#define SIZE_OF_WORD (sizeof(uint32_t))
 /******************************************************************************
  Platform - HOST
 ******************************************************************************/
 #elif defined (HOST)
 #include <stdio.h>
 #define PRINTF(...) printf(__VA_ARGS__)
+#define SIZE_OF_WORD (sizeof(uint64_t))
 /******************************************************************************
  Platform - Unsupported
 ******************************************************************************/

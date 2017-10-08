@@ -23,6 +23,7 @@
 
 #include <stdio.h>
 #include "stats.h"
+#include "platform.h"
 
 /* Size of the Data Set */
 #define SIZE (40)
@@ -30,9 +31,10 @@
 /* Structure declaration*/
 STAT statistic;
 
+/*
 void main() {
 
-/* Data array*/
+// Data array
   unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                               114, 88,   45,  76, 123,  87,  25,  23,
                               200, 122, 150, 90,   92,  87, 177, 244,
@@ -51,6 +53,7 @@ void main() {
   printf("=========Statistic data of array=============\n");
   print_statistics (statistic);
 }
+*/
 
 void print_statistics ( STAT s){
 
@@ -64,8 +67,10 @@ void print_statistics ( STAT s){
 void print_array (unsigned char *arr,char size){
 unsigned int i=0U;
 
+#ifdef VERBOSE
  for (i=0;i<size;i++)
-	printf("index=%d \t value=%d \n",i,*(arr+i));
+	PRINTF("index=%d \t value=%d \n",i,*(arr+i));
+#endif
 }
 
 int find_median (unsigned char *arr,char size){

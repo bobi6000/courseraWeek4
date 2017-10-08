@@ -10,7 +10,7 @@
 #*****************************************************************************
 
 #------------------------------------------------------------------------------
-# Makefile to Homework Modul 2.
+# Makefile to Homework Modul 4.
 # Author Pawel Staniak
 # 
 #
@@ -27,21 +27,25 @@ include sources.mk
 
 # Platform Overrides
  
-BASENAME = c1m2
+BASENAME = c1m4
 TARGET = $(BASENAME).out
 
 # Architectures Specific Flags
 LINKER_FILE = ../msp432p401r.lds
 
-# Compiler Flags and Defines
 
+# Compiler Flags and Defines
+CPPFLAGs= -DCOURSE1
 
 	ifeq ($(PLATFORM),HOST)
 		CC = gcc
 		LD = ld
-		LDFLAGS = -Wl,-Map=$(BASENAME).map
-		CPPFLAGs = -DHOST
-		CFLAGS = -Wall -Werror -g -O0 -std=c99	
+		LDFLAGS = -Wl,-Map=$(BASENAME).map 
+		CPPFLAGs += -DHOST
+		CPPFLAGs += -DVERBOSE
+		CFLAGS = -Wall -Werror -g -O0 -std=c99
+		SIZE = size
+		OBJDUMP = objdump	
 		
 	else ifeq ($(PLATFORM),MSP432)
 
@@ -53,8 +57,11 @@ LINKER_FILE = ../msp432p401r.lds
 		SPECS = nosys.specs 
 		CC = arm-none-eabi-gcc
 		LD = arm-none-eabi-ld
+		SIZE = arm-none-eabi-size
+		OBJDUMP = arm-none-eabi-objdump
 		LDFLAGS = -Wl,-Map=$(BASENAME).map -T $(LINKER_FILE) 
-		CPPFLAGs = -DMSP432
+		CPPFLAGs = 	-MD \
+				-DMSP432
 		CFLAGS = -mcpu=$(CPU) -m$(ARCH) --specs=$(SPECS)\
 			 -march=$(ARCH2) -mfloat-abi=$(FLOAT)\
 			 -mfpu=$(FPU) -Wall -Werror\
@@ -68,23 +75,41 @@ LINKER_FILE = ../msp432p401r.lds
 
 OBJS = $(SOURCES:.c=.o)
 
+
 %.i : %.c
-	$(CC)  $(CPPFLAGs)  $(INCLUDES) -E  -o $@  $<
+	$(CC)  $(CPPFLAGs)  $(INCLUDES) -E  -o $@ $<
 %.asm : %.c
-	$(CC)  $(CPPFLAGs)  $(INCLUDES) -S  -o $@  $<
+	$(CC)  $(CPPFLAGs)  $(INCLUDES) -S  -o $@ $<
 %.o : %.c
-	$(CC)  $(CPPFLAGs) -c $<  $(INCLUDES) $(CFLAGS) 
+	@echo Object test
+	$(CC)  -MD $(CPPFLAGs) -c $<  $(INCLUDES) $(CFLAGS)    
+$(BASENAME).asm : $(TARGET)
+	$(OBJDUMP) -S $(TARGET) > $(BASENAME).asm
+
 
 .PHONY: compile-all
-compile-all: $(TARGET)
-	$(CC)  $(CPPFLAGs) -c $(OBJS)  $(INCLUDES) $(CFLAGS) 
+compile-all: $(OBJS)
+	@echo Compilation test
+#	$(CC)  $(CPPFLAGs) -c $(OBJS)  $(INCLUDES) $(CFLAGS) 
 
 .PHONY: build
 build : $(TARGET)
-
 $(TARGET) : $(OBJS)
-	$(CC)  $(CPPFLAGs)  $(OBJS)  $(INCLUDES) $(CFLAGS) $(LDFLAGS) -o $@
+	@echo Build test
+	$(CC)  $(CPPFLAGs)  $(OBJS)  $(INCLUDES) $(CFLAGS) $(LDFLAGS) -o $@ -lm
+	$(OBJDUMP) -S $(TARGET) > $(BASENAME).asm
+	$(SIZE) $(TARGET)
 
 .PHONY: clean
 clean:
-	rm -f $(TARGET) $(BASENAME).map *.o *.asm *.i
+	@echo Clean test
+	rm -f $(TARGET) $(BASENAME).map *.o *.asm *.i *.d
+
+.PHONY: info
+info:
+	@echo PLATFORM=$(PLATFORM)
+	@echo SOURCES=$(SOURCES)
+	@echo INCLUDES=$(INCLUDES)
+	@echo TARGET_NAME=$(TARGET)
+	@echo CPPFLAGs=$(CPPFLAGs)
+

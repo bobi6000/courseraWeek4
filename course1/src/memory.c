@@ -20,6 +20,8 @@
  * @date April 1 2017
  *
  */
+#include <stdlib.h>
+#include <stdio.h>
 #include "memory.h"
 
 /***********************************************************
@@ -48,3 +50,66 @@ void clear_all(char * ptr, unsigned int size){
   set_all(ptr, 0, size);
 }
 
+uint8_t* my_memmove(uint8_t *src, uint8_t *dst, size_t length){
+	int8_t  pos=0U;
+	uint8_t temp[length];
+printf("dlugosc= %d\n",length);
+ for(pos=length-1;pos>=0;pos--){
+	*(temp+pos)=*(src+pos);
+	printf("pozycja wzg poczatku %d\n",pos);
+	}
+ for(pos=0;pos<length;pos++)
+	*(dst+pos)=*(temp+pos);
+
+	return dst;
+}
+
+uint8_t * my_memcopy(uint8_t * src, uint8_t * dst, size_t length){
+	int8_t pos=0U;
+ for(pos=0U;pos<length;pos++)
+	*(dst+pos)=*(src+pos);
+
+	return dst;
+}
+
+uint8_t * my_memset(uint8_t * src, size_t length, uint8_t value){
+	int8_t pos=0U;
+	for(pos=0U;pos<length;pos++)
+	*(src+pos)=value;
+
+	return src;
+}
+
+uint8_t * my_memzero(uint8_t * src, size_t length){
+	int8_t pos=0U;
+	for(pos=0U;pos<length;pos++)
+	*(src+pos)=0;
+
+	return src;
+}
+
+uint8_t * my_reverse(uint8_t * src, size_t length){
+	uint32_t temp=0U;
+	int8_t pos=0U;
+
+	for(pos=0U;pos<length;pos++){
+		if(pos < (length-1-pos)){
+	temp=*(src+pos);
+	*(src+pos)=*(src+length-1-pos);
+	*(src+length-1-pos)=temp;
+		}
+	}
+	return src;
+}
+
+uint32_t * reserve_words(size_t length){
+	uint32_t * ptr;
+
+	ptr= (uint32_t*)malloc(length);
+
+	return ptr;
+}
+
+void free_words(uint32_t * src){
+	free((void*)src);
+}
