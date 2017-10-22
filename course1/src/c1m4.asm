@@ -16,52 +16,52 @@ Disassembly of section .plt:
    10414:	e59fe004 	ldr	lr, [pc, #4]	; 10420 <_init+0x1c>
    10418:	e08fe00e 	add	lr, pc, lr
    1041c:	e5bef008 	ldr	pc, [lr, #8]!
-   10420:	000120ec 	.word	0x000120ec
+   10420:	00012070 	.word	0x00012070
 
 00010424 <raise@plt>:
    10424:	e28fc600 	add	ip, pc, #0, 12
    10428:	e28cca12 	add	ip, ip, #73728	; 0x12000
-   1042c:	e5bcf0ec 	ldr	pc, [ip, #236]!	; 0xec
+   1042c:	e5bcf070 	ldr	pc, [ip, #112]!	; 0x70
 
 00010430 <printf@plt>:
    10430:	e28fc600 	add	ip, pc, #0, 12
    10434:	e28cca12 	add	ip, ip, #73728	; 0x12000
-   10438:	e5bcf0e4 	ldr	pc, [ip, #228]!	; 0xe4
+   10438:	e5bcf068 	ldr	pc, [ip, #104]!	; 0x68
 
 0001043c <free@plt>:
    1043c:	e28fc600 	add	ip, pc, #0, 12
    10440:	e28cca12 	add	ip, ip, #73728	; 0x12000
-   10444:	e5bcf0dc 	ldr	pc, [ip, #220]!	; 0xdc
+   10444:	e5bcf060 	ldr	pc, [ip, #96]!	; 0x60
 
 00010448 <pow@plt>:
    10448:	e28fc600 	add	ip, pc, #0, 12
    1044c:	e28cca12 	add	ip, ip, #73728	; 0x12000
-   10450:	e5bcf0d4 	ldr	pc, [ip, #212]!	; 0xd4
+   10450:	e5bcf058 	ldr	pc, [ip, #88]!	; 0x58
 
 00010454 <puts@plt>:
    10454:	e28fc600 	add	ip, pc, #0, 12
    10458:	e28cca12 	add	ip, ip, #73728	; 0x12000
-   1045c:	e5bcf0cc 	ldr	pc, [ip, #204]!	; 0xcc
+   1045c:	e5bcf050 	ldr	pc, [ip, #80]!	; 0x50
 
 00010460 <malloc@plt>:
    10460:	e28fc600 	add	ip, pc, #0, 12
    10464:	e28cca12 	add	ip, ip, #73728	; 0x12000
-   10468:	e5bcf0c4 	ldr	pc, [ip, #196]!	; 0xc4
+   10468:	e5bcf048 	ldr	pc, [ip, #72]!	; 0x48
 
 0001046c <__libc_start_main@plt>:
    1046c:	e28fc600 	add	ip, pc, #0, 12
    10470:	e28cca12 	add	ip, ip, #73728	; 0x12000
-   10474:	e5bcf0bc 	ldr	pc, [ip, #188]!	; 0xbc
+   10474:	e5bcf040 	ldr	pc, [ip, #64]!	; 0x40
 
 00010478 <__gmon_start__@plt>:
    10478:	e28fc600 	add	ip, pc, #0, 12
    1047c:	e28cca12 	add	ip, ip, #73728	; 0x12000
-   10480:	e5bcf0b4 	ldr	pc, [ip, #180]!	; 0xb4
+   10480:	e5bcf038 	ldr	pc, [ip, #56]!	; 0x38
 
 00010484 <abort@plt>:
    10484:	e28fc600 	add	ip, pc, #0, 12
    10488:	e28cca12 	add	ip, ip, #73728	; 0x12000
-   1048c:	e5bcf0ac 	ldr	pc, [ip, #172]!	; 0xac
+   1048c:	e5bcf030 	ldr	pc, [ip, #48]!	; 0x30
 
 Disassembly of section .text:
 
@@ -78,9 +78,9 @@ Disassembly of section .text:
    104b4:	e59f300c 	ldr	r3, [pc, #12]	; 104c8 <_start+0x38>
    104b8:	ebffffeb 	bl	1046c <__libc_start_main@plt>
    104bc:	ebfffff0 	bl	10484 <abort@plt>
-   104c0:	00012174 	.word	0x00012174
+   104c0:	00012124 	.word	0x00012124
    104c4:	000105b8 	.word	0x000105b8
-   104c8:	00012110 	.word	0x00012110
+   104c8:	000120c0 	.word	0x000120c0
 
 000104cc <call_weak_fn>:
    104cc:	e59f3014 	ldr	r3, [pc, #20]	; 104e8 <call_weak_fn+0x1c>
@@ -90,7 +90,7 @@ Disassembly of section .text:
    104dc:	e3520000 	cmp	r2, #0
    104e0:	012fff1e 	bxeq	lr
    104e4:	eaffffe3 	b	10478 <__gmon_start__@plt>
-   104e8:	00012030 	.word	0x00012030
+   104e8:	00011fb4 	.word	0x00011fb4
    104ec:	00000030 	.word	0x00000030
 
 000104f0 <deregister_tm_clones>:
@@ -103,8 +103,8 @@ Disassembly of section .text:
    10508:	e3530000 	cmp	r3, #0
    1050c:	012fff1e 	bxeq	lr
    10510:	e12fff13 	bx	r3
-   10514:	0002254b 	.word	0x0002254b
-   10518:	00022548 	.word	0x00022548
+   10514:	000224cf 	.word	0x000224cf
+   10518:	000224cc 	.word	0x000224cc
    1051c:	00000000 	.word	0x00000000
 
 00010520 <register_tm_clones>:
@@ -119,8 +119,8 @@ Disassembly of section .text:
    10540:	e3530000 	cmp	r3, #0
    10544:	012fff1e 	bxeq	lr
    10548:	e12fff13 	bx	r3
-   1054c:	00022548 	.word	0x00022548
-   10550:	00022548 	.word	0x00022548
+   1054c:	000224cc 	.word	0x000224cc
+   10550:	000224cc 	.word	0x000224cc
    10554:	00000000 	.word	0x00000000
 
 00010558 <__do_global_dtors_aux>:
@@ -133,7 +133,7 @@ Disassembly of section .text:
    10570:	e3a03001 	mov	r3, #1
    10574:	e5c43000 	strb	r3, [r4]
    10578:	e8bd8010 	pop	{r4, pc}
-   1057c:	00022548 	.word	0x00022548
+   1057c:	000224cc 	.word	0x000224cc
 
 00010580 <frame_dummy>:
    10580:	e92d4008 	push	{r3, lr}
@@ -148,7 +148,7 @@ Disassembly of section .text:
    105a4:	0afffffa 	beq	10594 <frame_dummy+0x14>
    105a8:	e12fff33 	blx	r3
    105ac:	eafffff8 	b	10594 <frame_dummy+0x14>
-   105b0:	00022418 	.word	0x00022418
+   105b0:	0002239c 	.word	0x0002239c
    105b4:	00000000 	.word	0x00000000
 
 000105b8 <main>:
@@ -198,7 +198,7 @@ int8_t test_data1() {
 
   ptr = (uint8_t*) reserve_words( DATA_SET_SIZE_W );
    105ec:	e3a0000a 	mov	r0, #10
-   105f0:	eb00039c 	bl	11468 <reserve_words>
+   105f0:	eb000383 	bl	11404 <reserve_words>
    105f4:	e50b000c 	str	r0, [fp, #-12]
 
   if (! ptr )
@@ -215,7 +215,7 @@ int8_t test_data1() {
    1060c:	e51b0008 	ldr	r0, [fp, #-8]
    10610:	e51b100c 	ldr	r1, [fp, #-12]
    10614:	e3a02010 	mov	r2, #16
-   10618:	eb0004bd 	bl	11914 <my_itoa>
+   10618:	eb0004a9 	bl	118c4 <my_itoa>
    1061c:	e1a03000 	mov	r3, r0
    10620:	e50b3010 	str	r3, [fp, #-16]
   value = my_atoi( ptr, digits, BASE_16);
@@ -224,7 +224,7 @@ int8_t test_data1() {
    1062c:	e51b000c 	ldr	r0, [fp, #-12]
    10630:	e1a01003 	mov	r1, r3
    10634:	e3a02010 	mov	r2, #16
-   10638:	eb0005b8 	bl	11d20 <my_atoi>
+   10638:	eb0005a4 	bl	11cd0 <my_atoi>
    1063c:	e50b0014 	str	r0, [fp, #-20]	; 0xffffffec
   #ifdef VERBOSE
   PRINTF("  Initial number: %d\n", num);
@@ -238,7 +238,7 @@ int8_t test_data1() {
   #endif
   free_words( (uint32_t*)ptr );
    10658:	e51b000c 	ldr	r0, [fp, #-12]
-   1065c:	eb00038d 	bl	11498 <free_words>
+   1065c:	eb000379 	bl	11448 <free_words>
 
   if ( value != num )
    10660:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
@@ -258,9 +258,9 @@ int8_t test_data1() {
    10684:	e24bd004 	sub	sp, fp, #4
    10688:	e8bd8800 	pop	{fp, pc}
    1068c:	fffff000 	.word	0xfffff000
-   10690:	00012184 	.word	0x00012184
-   10694:	00012194 	.word	0x00012194
-   10698:	000121ac 	.word	0x000121ac
+   10690:	00012134 	.word	0x00012134
+   10694:	00012144 	.word	0x00012144
+   10698:	0001215c 	.word	0x0001215c
 
 0001069c <test_data2>:
 
@@ -280,7 +280,7 @@ int8_t test_data2() {
    106b4:	ebffff66 	bl	10454 <puts@plt>
   ptr = (uint8_t*) reserve_words( DATA_SET_SIZE_W );
    106b8:	e3a0000a 	mov	r0, #10
-   106bc:	eb000369 	bl	11468 <reserve_words>
+   106bc:	eb000350 	bl	11404 <reserve_words>
    106c0:	e50b000c 	str	r0, [fp, #-12]
 
   if (! ptr )
@@ -297,7 +297,7 @@ int8_t test_data2() {
    106d8:	e51b0008 	ldr	r0, [fp, #-8]
    106dc:	e51b100c 	ldr	r1, [fp, #-12]
    106e0:	e3a0200a 	mov	r2, #10
-   106e4:	eb00048a 	bl	11914 <my_itoa>
+   106e4:	eb000476 	bl	118c4 <my_itoa>
    106e8:	e1a03000 	mov	r3, r0
    106ec:	e50b3010 	str	r3, [fp, #-16]
   value = my_atoi( ptr, digits, BASE_10);
@@ -306,7 +306,7 @@ int8_t test_data2() {
    106f8:	e51b000c 	ldr	r0, [fp, #-12]
    106fc:	e1a01003 	mov	r1, r3
    10700:	e3a0200a 	mov	r2, #10
-   10704:	eb000585 	bl	11d20 <my_atoi>
+   10704:	eb000571 	bl	11cd0 <my_atoi>
    10708:	e50b0014 	str	r0, [fp, #-20]	; 0xffffffec
   #ifdef VERBOSE
   PRINTF("  Initial Decimal number: %d\n", num);
@@ -324,7 +324,7 @@ int8_t test_data2() {
   #endif
   free_words( (uint32_t*)ptr );
    10730:	e51b000c 	ldr	r0, [fp, #-12]
-   10734:	eb000357 	bl	11498 <free_words>
+   10734:	eb000343 	bl	11448 <free_words>
 
   if ( value != num )
    10738:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
@@ -344,10 +344,10 @@ int8_t test_data2() {
    1075c:	e24bd004 	sub	sp, fp, #4
    10760:	e8bd8800 	pop	{fp, pc}
    10764:	0001e240 	.word	0x0001e240
-   10768:	000121c8 	.word	0x000121c8
-   1076c:	000121d8 	.word	0x000121d8
-   10770:	000121f8 	.word	0x000121f8
-   10774:	000121ac 	.word	0x000121ac
+   10768:	00012178 	.word	0x00012178
+   1076c:	00012188 	.word	0x00012188
+   10770:	000121a8 	.word	0x000121a8
+   10774:	0001215c 	.word	0x0001215c
 
 00010778 <test_memmove1>:
 
@@ -368,7 +368,7 @@ int8_t test_memmove1() {
    10790:	ebffff2f 	bl	10454 <puts@plt>
   set = (uint8_t*) reserve_words( MEM_SET_SIZE_W );
    10794:	e3a00040 	mov	r0, #64	; 0x40
-   10798:	eb000332 	bl	11468 <reserve_words>
+   10798:	eb000319 	bl	11404 <reserve_words>
    1079c:	e50b000c 	str	r0, [fp, #-12]
 
   if (! set ) 
@@ -420,7 +420,7 @@ int8_t test_memmove1() {
   print_array(set, MEM_SET_SIZE_B);
    10800:	e51b000c 	ldr	r0, [fp, #-12]
    10804:	e3a01020 	mov	r1, #32
-   10808:	eb000344 	bl	11520 <print_array>
+   10808:	eb000330 	bl	114d0 <print_array>
   my_memmove(ptra, ptrb, TEST_MEMMOVE_LENGTH);
    1080c:	e51b0010 	ldr	r0, [fp, #-16]
    10810:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
@@ -429,7 +429,7 @@ int8_t test_memmove1() {
   print_array(set, MEM_SET_SIZE_B);
    1081c:	e51b000c 	ldr	r0, [fp, #-12]
    10820:	e3a01020 	mov	r1, #32
-   10824:	eb00033d 	bl	11520 <print_array>
+   10824:	eb000329 	bl	114d0 <print_array>
 
   for (i = 0; i < TEST_MEMMOVE_LENGTH; i++)
    10828:	e3a03000 	mov	r3, #0
@@ -468,7 +468,7 @@ int8_t test_memmove1() {
 
   free_words( (uint32_t*)set );
    10874:	e51b000c 	ldr	r0, [fp, #-12]
-   10878:	eb000306 	bl	11498 <free_words>
+   10878:	eb0002f2 	bl	11448 <free_words>
 
   return ret;
    1087c:	e55b3006 	ldrb	r3, [fp, #-6]
@@ -477,7 +477,7 @@ int8_t test_memmove1() {
    10884:	e1a00003 	mov	r0, r3
    10888:	e24bd004 	sub	sp, fp, #4
    1088c:	e8bd8800 	pop	{fp, pc}
-   10890:	00012214 	.word	0x00012214
+   10890:	000121c4 	.word	0x000121c4
 
 00010894 <test_memmove2>:
 
@@ -498,7 +498,7 @@ int8_t test_memmove2() {
    108ac:	ebfffee8 	bl	10454 <puts@plt>
   set = (uint8_t*) reserve_words(MEM_SET_SIZE_W);
    108b0:	e3a00040 	mov	r0, #64	; 0x40
-   108b4:	eb0002eb 	bl	11468 <reserve_words>
+   108b4:	eb0002d2 	bl	11404 <reserve_words>
    108b8:	e50b000c 	str	r0, [fp, #-12]
 
   if (! set )
@@ -547,7 +547,7 @@ int8_t test_memmove2() {
   print_array(set, MEM_SET_SIZE_B);
    1091c:	e51b000c 	ldr	r0, [fp, #-12]
    10920:	e3a01020 	mov	r1, #32
-   10924:	eb0002fd 	bl	11520 <print_array>
+   10924:	eb0002e9 	bl	114d0 <print_array>
   my_memmove(ptra, ptrb, TEST_MEMMOVE_LENGTH);
    10928:	e51b0010 	ldr	r0, [fp, #-16]
    1092c:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
@@ -556,7 +556,7 @@ int8_t test_memmove2() {
   print_array(set, MEM_SET_SIZE_B);
    10938:	e51b000c 	ldr	r0, [fp, #-12]
    1093c:	e3a01020 	mov	r1, #32
-   10940:	eb0002f6 	bl	11520 <print_array>
+   10940:	eb0002e2 	bl	114d0 <print_array>
   for (i = 0; i < TEST_MEMMOVE_LENGTH; i++)
    10944:	e3a03000 	mov	r3, #0
    10948:	e54b3005 	strb	r3, [fp, #-5]
@@ -594,7 +594,7 @@ int8_t test_memmove2() {
 
   free_words( (uint32_t*)set );
    10990:	e51b000c 	ldr	r0, [fp, #-12]
-   10994:	eb0002bf 	bl	11498 <free_words>
+   10994:	eb0002ab 	bl	11448 <free_words>
   return ret;
    10998:	e55b3006 	ldrb	r3, [fp, #-6]
    1099c:	e6af3073 	sxtb	r3, r3
@@ -602,7 +602,7 @@ int8_t test_memmove2() {
    109a0:	e1a00003 	mov	r0, r3
    109a4:	e24bd004 	sub	sp, fp, #4
    109a8:	e8bd8800 	pop	{fp, pc}
-   109ac:	00012234 	.word	0x00012234
+   109ac:	000121e4 	.word	0x000121e4
 
 000109b0 <test_memmove3>:
 
@@ -623,7 +623,7 @@ int8_t test_memmove3() {
    109c8:	ebfffea1 	bl	10454 <puts@plt>
   set = (uint8_t*)reserve_words( MEM_SET_SIZE_W);
    109cc:	e3a00040 	mov	r0, #64	; 0x40
-   109d0:	eb0002a4 	bl	11468 <reserve_words>
+   109d0:	eb00028b 	bl	11404 <reserve_words>
    109d4:	e50b000c 	str	r0, [fp, #-12]
 
   if (! set ) 
@@ -674,7 +674,7 @@ int8_t test_memmove3() {
   print_array(set, MEM_SET_SIZE_B);
    10a38:	e51b000c 	ldr	r0, [fp, #-12]
    10a3c:	e3a01020 	mov	r1, #32
-   10a40:	eb0002b6 	bl	11520 <print_array>
+   10a40:	eb0002a2 	bl	114d0 <print_array>
   my_memmove(ptra, ptrb, TEST_MEMMOVE_LENGTH);
    10a44:	e51b0010 	ldr	r0, [fp, #-16]
    10a48:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
@@ -683,7 +683,7 @@ int8_t test_memmove3() {
   print_array(set, MEM_SET_SIZE_B);
    10a54:	e51b000c 	ldr	r0, [fp, #-12]
    10a58:	e3a01020 	mov	r1, #32
-   10a5c:	eb0002af 	bl	11520 <print_array>
+   10a5c:	eb00029b 	bl	114d0 <print_array>
 
   for (i = 0; i < TEST_MEMMOVE_LENGTH; i++)
    10a60:	e3a03000 	mov	r3, #0
@@ -723,7 +723,7 @@ int8_t test_memmove3() {
 
   free_words( (uint32_t*)set );
    10ab0:	e51b000c 	ldr	r0, [fp, #-12]
-   10ab4:	eb000277 	bl	11498 <free_words>
+   10ab4:	eb000263 	bl	11448 <free_words>
   return ret;
    10ab8:	e55b3006 	ldrb	r3, [fp, #-6]
    10abc:	e6af3073 	sxtb	r3, r3
@@ -732,7 +732,7 @@ int8_t test_memmove3() {
    10ac0:	e1a00003 	mov	r0, r3
    10ac4:	e24bd004 	sub	sp, fp, #4
    10ac8:	e8bd8800 	pop	{fp, pc}
-   10acc:	0001226c 	.word	0x0001226c
+   10acc:	0001221c 	.word	0x0001221c
 
 00010ad0 <test_memcopy>:
 
@@ -753,7 +753,7 @@ int8_t test_memcopy() {
    10ae8:	ebfffe59 	bl	10454 <puts@plt>
   set = (uint8_t*) reserve_words(MEM_SET_SIZE_W);
    10aec:	e3a00040 	mov	r0, #64	; 0x40
-   10af0:	eb00025c 	bl	11468 <reserve_words>
+   10af0:	eb000243 	bl	11404 <reserve_words>
    10af4:	e50b000c 	str	r0, [fp, #-12]
 
   if (! set ) 
@@ -802,16 +802,16 @@ int8_t test_memcopy() {
   print_array(set, MEM_SET_SIZE_B);
    10b58:	e51b000c 	ldr	r0, [fp, #-12]
    10b5c:	e3a01020 	mov	r1, #32
-   10b60:	eb00026e 	bl	11520 <print_array>
+   10b60:	eb00025a 	bl	114d0 <print_array>
   my_memcopy(ptra, ptrb, TEST_MEMMOVE_LENGTH);
    10b64:	e51b0010 	ldr	r0, [fp, #-16]
    10b68:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
    10b6c:	e3a02010 	mov	r2, #16
-   10b70:	eb0001a5 	bl	1120c <my_memcopy>
+   10b70:	eb00018d 	bl	111ac <my_memcopy>
   print_array(set, MEM_SET_SIZE_B);
    10b74:	e51b000c 	ldr	r0, [fp, #-12]
    10b78:	e3a01020 	mov	r1, #32
-   10b7c:	eb000267 	bl	11520 <print_array>
+   10b7c:	eb000253 	bl	114d0 <print_array>
 
   for (i = 0; i < TEST_MEMMOVE_LENGTH; i++)
    10b80:	e3a03000 	mov	r3, #0
@@ -850,7 +850,7 @@ int8_t test_memcopy() {
 
   free_words( (uint32_t*)set );
    10bcc:	e51b000c 	ldr	r0, [fp, #-12]
-   10bd0:	eb000230 	bl	11498 <free_words>
+   10bd0:	eb00021c 	bl	11448 <free_words>
   return ret;
    10bd4:	e55b3006 	ldrb	r3, [fp, #-6]
    10bd8:	e6af3073 	sxtb	r3, r3
@@ -858,7 +858,7 @@ int8_t test_memcopy() {
    10bdc:	e1a00003 	mov	r0, r3
    10be0:	e24bd004 	sub	sp, fp, #4
    10be4:	e8bd8800 	pop	{fp, pc}
-   10be8:	000122a4 	.word	0x000122a4
+   10be8:	00012254 	.word	0x00012254
 
 00010bec <test_memset>:
 
@@ -880,7 +880,7 @@ int8_t test_memset()
    10c04:	ebfffe12 	bl	10454 <puts@plt>
   set = (uint8_t*)reserve_words(MEM_SET_SIZE_W);
    10c08:	e3a00040 	mov	r0, #64	; 0x40
-   10c0c:	eb000215 	bl	11468 <reserve_words>
+   10c0c:	eb0001fc 	bl	11404 <reserve_words>
    10c10:	e50b000c 	str	r0, [fp, #-12]
   if (! set )
    10c14:	e51b300c 	ldr	r3, [fp, #-12]
@@ -930,24 +930,24 @@ int8_t test_memset()
   print_array(set, MEM_SET_SIZE_B);
    10c74:	e51b000c 	ldr	r0, [fp, #-12]
    10c78:	e3a01020 	mov	r1, #32
-   10c7c:	eb000227 	bl	11520 <print_array>
+   10c7c:	eb000213 	bl	114d0 <print_array>
   my_memset(ptra, MEM_SET_SIZE_B, 0xFF);
    10c80:	e51b0010 	ldr	r0, [fp, #-16]
    10c84:	e3a01020 	mov	r1, #32
    10c88:	e3a020ff 	mov	r2, #255	; 0xff
-   10c8c:	eb00017f 	bl	11290 <my_memset>
+   10c8c:	eb000167 	bl	11230 <my_memset>
   print_array(set, MEM_SET_SIZE_B);
    10c90:	e51b000c 	ldr	r0, [fp, #-12]
    10c94:	e3a01020 	mov	r1, #32
-   10c98:	eb000220 	bl	11520 <print_array>
+   10c98:	eb00020c 	bl	114d0 <print_array>
   my_memzero(ptrb, MEM_ZERO_LENGTH);
    10c9c:	e51b0014 	ldr	r0, [fp, #-20]	; 0xffffffec
    10ca0:	e3a01010 	mov	r1, #16
-   10ca4:	eb000198 	bl	1130c <my_memzero>
+   10ca4:	eb000180 	bl	112ac <my_memzero>
   print_array(set, MEM_SET_SIZE_B);
    10ca8:	e51b000c 	ldr	r0, [fp, #-12]
    10cac:	e3a01020 	mov	r1, #32
-   10cb0:	eb00021a 	bl	11520 <print_array>
+   10cb0:	eb000206 	bl	114d0 <print_array>
   
   /* Validate Set & Zero Functionality */
   for (i = 0; i < MEM_ZERO_LENGTH; i++)
@@ -999,7 +999,7 @@ int8_t test_memset()
   
   free_words( (uint32_t*)set );
    10d20:	e51b000c 	ldr	r0, [fp, #-12]
-   10d24:	eb0001db 	bl	11498 <free_words>
+   10d24:	eb0001c7 	bl	11448 <free_words>
   return ret;
    10d28:	e55b3006 	ldrb	r3, [fp, #-6]
    10d2c:	e6af3073 	sxtb	r3, r3
@@ -1007,7 +1007,7 @@ int8_t test_memset()
    10d30:	e1a00003 	mov	r0, r3
    10d34:	e24bd004 	sub	sp, fp, #4
    10d38:	e8bd8800 	pop	{fp, pc}
-   10d3c:	000122b4 	.word	0x000122b4
+   10d3c:	00012264 	.word	0x00012264
 
 00010d40 <test_reverse>:
 
@@ -1045,7 +1045,7 @@ int8_t test_reverse()
    10d8c:	ebfffdb0 	bl	10454 <puts@plt>
   copy = (uint8_t*)reserve_words(MEM_SET_SIZE_W);
    10d90:	e3a00040 	mov	r0, #64	; 0x40
-   10d94:	eb0001b3 	bl	11468 <reserve_words>
+   10d94:	eb00019a 	bl	11404 <reserve_words>
    10d98:	e50b000c 	str	r0, [fp, #-12]
   if (! copy )
    10d9c:	e51b300c 	ldr	r3, [fp, #-12]
@@ -1062,23 +1062,23 @@ int8_t test_reverse()
    10db4:	e1a00003 	mov	r0, r3
    10db8:	e51b100c 	ldr	r1, [fp, #-12]
    10dbc:	e3a02020 	mov	r2, #32
-   10dc0:	eb000111 	bl	1120c <my_memcopy>
+   10dc0:	eb0000f9 	bl	111ac <my_memcopy>
 
   print_array(set, MEM_SET_SIZE_B);
    10dc4:	e24b302c 	sub	r3, fp, #44	; 0x2c
    10dc8:	e1a00003 	mov	r0, r3
    10dcc:	e3a01020 	mov	r1, #32
-   10dd0:	eb0001d2 	bl	11520 <print_array>
+   10dd0:	eb0001be 	bl	114d0 <print_array>
   my_reverse(set, MEM_SET_SIZE_B);
    10dd4:	e24b302c 	sub	r3, fp, #44	; 0x2c
    10dd8:	e1a00003 	mov	r0, r3
    10ddc:	e3a01020 	mov	r1, #32
-   10de0:	eb000166 	bl	11380 <my_reverse>
+   10de0:	eb00014e 	bl	11320 <my_reverse>
   print_array(set, MEM_SET_SIZE_B);
    10de4:	e24b302c 	sub	r3, fp, #44	; 0x2c
    10de8:	e1a00003 	mov	r0, r3
    10dec:	e3a01020 	mov	r1, #32
-   10df0:	eb0001ca 	bl	11520 <print_array>
+   10df0:	eb0001b6 	bl	114d0 <print_array>
 
   for (i = 0; i < MEM_SET_SIZE_B; i++)
    10df4:	e3a03000 	mov	r3, #0
@@ -1120,7 +1120,7 @@ int8_t test_reverse()
 
   free_words( (uint32_t*)copy );
    10e4c:	e51b000c 	ldr	r0, [fp, #-12]
-   10e50:	eb000190 	bl	11498 <free_words>
+   10e50:	eb00017c 	bl	11448 <free_words>
   return ret;
    10e54:	e55b3006 	ldrb	r3, [fp, #-6]
    10e58:	e6af3073 	sxtb	r3, r3
@@ -1128,8 +1128,8 @@ int8_t test_reverse()
    10e5c:	e1a00003 	mov	r0, r3
    10e60:	e24bd004 	sub	sp, fp, #4
    10e64:	e8bd8800 	pop	{fp, pc}
-   10e68:	000122d4 	.word	0x000122d4
-   10e6c:	000122c4 	.word	0x000122c4
+   10e68:	00012284 	.word	0x00012284
+   10e6c:	00012274 	.word	0x00012274
 
 00010e70 <course1>:
 
@@ -1234,10 +1234,10 @@ void course1(void)
 }
    10f70:	e24bd004 	sub	sp, fp, #4
    10f74:	e8bd8800 	pop	{fp, pc}
-   10f78:	000122f4 	.word	0x000122f4
-   10f7c:	00012318 	.word	0x00012318
-   10f80:	00012328 	.word	0x00012328
-   10f84:	0001233c 	.word	0x0001233c
+   10f78:	000122a4 	.word	0x000122a4
+   10f7c:	000122c8 	.word	0x000122c8
+   10f80:	000122d8 	.word	0x000122d8
+   10f84:	000122ec 	.word	0x000122ec
 
 00010f88 <set_value>:
 #include "memory.h"
@@ -1360,1514 +1360,1494 @@ void clear_all(char * ptr, unsigned int size){
 000110b0 <my_memmove>:
 
 uint8_t* my_memmove(uint8_t *src, uint8_t *dst, size_t length){
-   110b0:	e92d49f0 	push	{r4, r5, r6, r7, r8, fp, lr}
-   110b4:	e28db018 	add	fp, sp, #24
-   110b8:	e24dd024 	sub	sp, sp, #36	; 0x24
-   110bc:	e50b0030 	str	r0, [fp, #-48]	; 0xffffffd0
-   110c0:	e50b1034 	str	r1, [fp, #-52]	; 0xffffffcc
-   110c4:	e50b2038 	str	r2, [fp, #-56]	; 0xffffffc8
-   110c8:	e1a0300d 	mov	r3, sp
-   110cc:	e1a08003 	mov	r8, r3
+   110b0:	e92d4800 	push	{fp, lr}
+   110b4:	e28db004 	add	fp, sp, #4
+   110b8:	e24dd018 	sub	sp, sp, #24
+   110bc:	e50b0010 	str	r0, [fp, #-16]
+   110c0:	e50b1014 	str	r1, [fp, #-20]	; 0xffffffec
+   110c4:	e50b2018 	str	r2, [fp, #-24]	; 0xffffffe8
 	int8_t  pos=0U;
-   110d0:	e3a03000 	mov	r3, #0
-   110d4:	e54b301d 	strb	r3, [fp, #-29]	; 0xffffffe3
-	uint8_t temp[length];
-   110d8:	e51b1038 	ldr	r1, [fp, #-56]	; 0xffffffc8
-   110dc:	e1a03001 	mov	r3, r1
-   110e0:	e2433001 	sub	r3, r3, #1
-   110e4:	e50b3024 	str	r3, [fp, #-36]	; 0xffffffdc
-   110e8:	e1a02001 	mov	r2, r1
-   110ec:	e3a03000 	mov	r3, #0
-   110f0:	e1a07183 	lsl	r7, r3, #3
-   110f4:	e1877ea2 	orr	r7, r7, r2, lsr #29
-   110f8:	e1a06182 	lsl	r6, r2, #3
-   110fc:	e1a02001 	mov	r2, r1
-   11100:	e3a03000 	mov	r3, #0
-   11104:	e1a05183 	lsl	r5, r3, #3
-   11108:	e1855ea2 	orr	r5, r5, r2, lsr #29
-   1110c:	e1a04182 	lsl	r4, r2, #3
-   11110:	e2813007 	add	r3, r1, #7
-   11114:	e1a031a3 	lsr	r3, r3, #3
-   11118:	e1a03183 	lsl	r3, r3, #3
-   1111c:	e04dd003 	sub	sp, sp, r3
-   11120:	e1a0300d 	mov	r3, sp
-   11124:	e2833000 	add	r3, r3, #0
-   11128:	e50b3028 	str	r3, [fp, #-40]	; 0xffffffd8
-printf("dlugosc= %d\n",length);
-   1112c:	e59f00d0 	ldr	r0, [pc, #208]	; 11204 <my_memmove+0x154>
-   11130:	e51b1038 	ldr	r1, [fp, #-56]	; 0xffffffc8
-   11134:	ebfffcbd 	bl	10430 <printf@plt>
- for(pos=length-1;pos>=0;pos--){
-   11138:	e51b3038 	ldr	r3, [fp, #-56]	; 0xffffffc8
-   1113c:	e6ef3073 	uxtb	r3, r3
-   11140:	e2433001 	sub	r3, r3, #1
-   11144:	e6ef3073 	uxtb	r3, r3
-   11148:	e54b301d 	strb	r3, [fp, #-29]	; 0xffffffe3
-   1114c:	ea000010 	b	11194 <my_memmove+0xe4>
-	*(temp+pos)=*(src+pos);
-   11150:	e51b2028 	ldr	r2, [fp, #-40]	; 0xffffffd8
-   11154:	e15b31dd 	ldrsb	r3, [fp, #-29]	; 0xffffffe3
-   11158:	e0823003 	add	r3, r2, r3
-   1115c:	e15b21dd 	ldrsb	r2, [fp, #-29]	; 0xffffffe3
-   11160:	e51b1030 	ldr	r1, [fp, #-48]	; 0xffffffd0
-   11164:	e0812002 	add	r2, r1, r2
-   11168:	e5d22000 	ldrb	r2, [r2]
-   1116c:	e5c32000 	strb	r2, [r3]
-	printf("pozycja wzg poczatku %d\n",pos);
-   11170:	e15b31dd 	ldrsb	r3, [fp, #-29]	; 0xffffffe3
-   11174:	e59f008c 	ldr	r0, [pc, #140]	; 11208 <my_memmove+0x158>
-   11178:	e1a01003 	mov	r1, r3
-   1117c:	ebfffcab 	bl	10430 <printf@plt>
+   110c8:	e3a03000 	mov	r3, #0
+   110cc:	e54b3005 	strb	r3, [fp, #-5]
+	uint32_t *temp;
 
+	temp=(uint32_t*)malloc(sizeof *temp * length);
+   110d0:	e51b3018 	ldr	r3, [fp, #-24]	; 0xffffffe8
+   110d4:	e1a03103 	lsl	r3, r3, #2
+   110d8:	e1a00003 	mov	r0, r3
+   110dc:	ebfffcdf 	bl	10460 <malloc@plt>
+   110e0:	e1a03000 	mov	r3, r0
+   110e4:	e50b300c 	str	r3, [fp, #-12]
+ for(pos=0;pos<length;pos++)
+   110e8:	e3a03000 	mov	r3, #0
+   110ec:	e54b3005 	strb	r3, [fp, #-5]
+   110f0:	ea00000d 	b	1112c <my_memmove+0x7c>
+	*(temp+pos)=*(src+pos);
+   110f4:	e15b30d5 	ldrsb	r3, [fp, #-5]
+   110f8:	e1a03103 	lsl	r3, r3, #2
+   110fc:	e51b200c 	ldr	r2, [fp, #-12]
+   11100:	e0823003 	add	r3, r2, r3
+   11104:	e15b20d5 	ldrsb	r2, [fp, #-5]
+   11108:	e51b1010 	ldr	r1, [fp, #-16]
+   1110c:	e0812002 	add	r2, r1, r2
+   11110:	e5d22000 	ldrb	r2, [r2]
+   11114:	e5832000 	str	r2, [r3]
 uint8_t* my_memmove(uint8_t *src, uint8_t *dst, size_t length){
 	int8_t  pos=0U;
-	uint8_t temp[length];
-printf("dlugosc= %d\n",length);
- for(pos=length-1;pos>=0;pos--){
-   11180:	e55b301d 	ldrb	r3, [fp, #-29]	; 0xffffffe3
-   11184:	e6ef3073 	uxtb	r3, r3
-   11188:	e2433001 	sub	r3, r3, #1
-   1118c:	e6ef3073 	uxtb	r3, r3
-   11190:	e54b301d 	strb	r3, [fp, #-29]	; 0xffffffe3
-   11194:	e15b31dd 	ldrsb	r3, [fp, #-29]	; 0xffffffe3
-   11198:	e3530000 	cmp	r3, #0
-   1119c:	aaffffeb 	bge	11150 <my_memmove+0xa0>
-	*(temp+pos)=*(src+pos);
-	printf("pozycja wzg poczatku %d\n",pos);
-	}
+	uint32_t *temp;
+
+	temp=(uint32_t*)malloc(sizeof *temp * length);
  for(pos=0;pos<length;pos++)
-   111a0:	e3a03000 	mov	r3, #0
-   111a4:	e54b301d 	strb	r3, [fp, #-29]	; 0xffffffe3
-   111a8:	ea00000c 	b	111e0 <my_memmove+0x130>
+   11118:	e55b3005 	ldrb	r3, [fp, #-5]
+   1111c:	e6ef3073 	uxtb	r3, r3
+   11120:	e2833001 	add	r3, r3, #1
+   11124:	e6ef3073 	uxtb	r3, r3
+   11128:	e54b3005 	strb	r3, [fp, #-5]
+   1112c:	e15b20d5 	ldrsb	r2, [fp, #-5]
+   11130:	e51b3018 	ldr	r3, [fp, #-24]	; 0xffffffe8
+   11134:	e1520003 	cmp	r2, r3
+   11138:	3affffed 	bcc	110f4 <my_memmove+0x44>
+	*(temp+pos)=*(src+pos);
+
+ for(pos=0;pos<length;pos++)
+   1113c:	e3a03000 	mov	r3, #0
+   11140:	e54b3005 	strb	r3, [fp, #-5]
+   11144:	ea00000e 	b	11184 <my_memmove+0xd4>
 	*(dst+pos)=*(temp+pos);
-   111ac:	e15b31dd 	ldrsb	r3, [fp, #-29]	; 0xffffffe3
-   111b0:	e51b2034 	ldr	r2, [fp, #-52]	; 0xffffffcc
-   111b4:	e0823003 	add	r3, r2, r3
-   111b8:	e51b1028 	ldr	r1, [fp, #-40]	; 0xffffffd8
-   111bc:	e15b21dd 	ldrsb	r2, [fp, #-29]	; 0xffffffe3
-   111c0:	e0812002 	add	r2, r1, r2
-   111c4:	e5d22000 	ldrb	r2, [r2]
-   111c8:	e5c32000 	strb	r2, [r3]
-printf("dlugosc= %d\n",length);
- for(pos=length-1;pos>=0;pos--){
-	*(temp+pos)=*(src+pos);
-	printf("pozycja wzg poczatku %d\n",pos);
-	}
+   11148:	e15b30d5 	ldrsb	r3, [fp, #-5]
+   1114c:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   11150:	e0823003 	add	r3, r2, r3
+   11154:	e15b20d5 	ldrsb	r2, [fp, #-5]
+   11158:	e1a02102 	lsl	r2, r2, #2
+   1115c:	e51b100c 	ldr	r1, [fp, #-12]
+   11160:	e0812002 	add	r2, r1, r2
+   11164:	e5922000 	ldr	r2, [r2]
+   11168:	e6ef2072 	uxtb	r2, r2
+   1116c:	e5c32000 	strb	r2, [r3]
+
+	temp=(uint32_t*)malloc(sizeof *temp * length);
  for(pos=0;pos<length;pos++)
-   111cc:	e55b301d 	ldrb	r3, [fp, #-29]	; 0xffffffe3
-   111d0:	e6ef3073 	uxtb	r3, r3
-   111d4:	e2833001 	add	r3, r3, #1
-   111d8:	e6ef3073 	uxtb	r3, r3
-   111dc:	e54b301d 	strb	r3, [fp, #-29]	; 0xffffffe3
-   111e0:	e15b21dd 	ldrsb	r2, [fp, #-29]	; 0xffffffe3
-   111e4:	e51b3038 	ldr	r3, [fp, #-56]	; 0xffffffc8
-   111e8:	e1520003 	cmp	r2, r3
-   111ec:	3affffee 	bcc	111ac <my_memmove+0xfc>
+	*(temp+pos)=*(src+pos);
+
+ for(pos=0;pos<length;pos++)
+   11170:	e55b3005 	ldrb	r3, [fp, #-5]
+   11174:	e6ef3073 	uxtb	r3, r3
+   11178:	e2833001 	add	r3, r3, #1
+   1117c:	e6ef3073 	uxtb	r3, r3
+   11180:	e54b3005 	strb	r3, [fp, #-5]
+   11184:	e15b20d5 	ldrsb	r2, [fp, #-5]
+   11188:	e51b3018 	ldr	r3, [fp, #-24]	; 0xffffffe8
+   1118c:	e1520003 	cmp	r2, r3
+   11190:	3affffec 	bcc	11148 <my_memmove+0x98>
 	*(dst+pos)=*(temp+pos);
 
-	return dst;
-   111f0:	e51b3034 	ldr	r3, [fp, #-52]	; 0xffffffcc
-   111f4:	e1a0d008 	mov	sp, r8
+	free(temp);
+   11194:	e51b000c 	ldr	r0, [fp, #-12]
+   11198:	ebfffca7 	bl	1043c <free@plt>
+ return dst;
+   1119c:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
 }
-   111f8:	e1a00003 	mov	r0, r3
-   111fc:	e24bd018 	sub	sp, fp, #24
-   11200:	e8bd89f0 	pop	{r4, r5, r6, r7, r8, fp, pc}
-   11204:	00012350 	.word	0x00012350
-   11208:	00012360 	.word	0x00012360
+   111a0:	e1a00003 	mov	r0, r3
+   111a4:	e24bd004 	sub	sp, fp, #4
+   111a8:	e8bd8800 	pop	{fp, pc}
 
-0001120c <my_memcopy>:
+000111ac <my_memcopy>:
 
 uint8_t * my_memcopy(uint8_t * src, uint8_t * dst, size_t length){
-   1120c:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
-   11210:	e28db000 	add	fp, sp, #0
-   11214:	e24dd01c 	sub	sp, sp, #28
-   11218:	e50b0010 	str	r0, [fp, #-16]
-   1121c:	e50b1014 	str	r1, [fp, #-20]	; 0xffffffec
-   11220:	e50b2018 	str	r2, [fp, #-24]	; 0xffffffe8
+   111ac:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
+   111b0:	e28db000 	add	fp, sp, #0
+   111b4:	e24dd01c 	sub	sp, sp, #28
+   111b8:	e50b0010 	str	r0, [fp, #-16]
+   111bc:	e50b1014 	str	r1, [fp, #-20]	; 0xffffffec
+   111c0:	e50b2018 	str	r2, [fp, #-24]	; 0xffffffe8
 	int8_t pos=0U;
-   11224:	e3a03000 	mov	r3, #0
-   11228:	e54b3005 	strb	r3, [fp, #-5]
+   111c4:	e3a03000 	mov	r3, #0
+   111c8:	e54b3005 	strb	r3, [fp, #-5]
  for(pos=0U;pos<length;pos++)
-   1122c:	e3a03000 	mov	r3, #0
-   11230:	e54b3005 	strb	r3, [fp, #-5]
-   11234:	ea00000c 	b	1126c <my_memcopy+0x60>
+   111cc:	e3a03000 	mov	r3, #0
+   111d0:	e54b3005 	strb	r3, [fp, #-5]
+   111d4:	ea00000c 	b	1120c <my_memcopy+0x60>
 	*(dst+pos)=*(src+pos);
-   11238:	e15b30d5 	ldrsb	r3, [fp, #-5]
-   1123c:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
-   11240:	e0823003 	add	r3, r2, r3
-   11244:	e15b20d5 	ldrsb	r2, [fp, #-5]
-   11248:	e51b1010 	ldr	r1, [fp, #-16]
-   1124c:	e0812002 	add	r2, r1, r2
-   11250:	e5d22000 	ldrb	r2, [r2]
-   11254:	e5c32000 	strb	r2, [r3]
-	return dst;
+   111d8:	e15b30d5 	ldrsb	r3, [fp, #-5]
+   111dc:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   111e0:	e0823003 	add	r3, r2, r3
+   111e4:	e15b20d5 	ldrsb	r2, [fp, #-5]
+   111e8:	e51b1010 	ldr	r1, [fp, #-16]
+   111ec:	e0812002 	add	r2, r1, r2
+   111f0:	e5d22000 	ldrb	r2, [r2]
+   111f4:	e5c32000 	strb	r2, [r3]
+ return dst;
 }
 
 uint8_t * my_memcopy(uint8_t * src, uint8_t * dst, size_t length){
 	int8_t pos=0U;
  for(pos=0U;pos<length;pos++)
-   11258:	e55b3005 	ldrb	r3, [fp, #-5]
-   1125c:	e6ef3073 	uxtb	r3, r3
-   11260:	e2833001 	add	r3, r3, #1
-   11264:	e6ef3073 	uxtb	r3, r3
-   11268:	e54b3005 	strb	r3, [fp, #-5]
-   1126c:	e15b20d5 	ldrsb	r2, [fp, #-5]
-   11270:	e51b3018 	ldr	r3, [fp, #-24]	; 0xffffffe8
-   11274:	e1520003 	cmp	r2, r3
-   11278:	3affffee 	bcc	11238 <my_memcopy+0x2c>
+   111f8:	e55b3005 	ldrb	r3, [fp, #-5]
+   111fc:	e6ef3073 	uxtb	r3, r3
+   11200:	e2833001 	add	r3, r3, #1
+   11204:	e6ef3073 	uxtb	r3, r3
+   11208:	e54b3005 	strb	r3, [fp, #-5]
+   1120c:	e15b20d5 	ldrsb	r2, [fp, #-5]
+   11210:	e51b3018 	ldr	r3, [fp, #-24]	; 0xffffffe8
+   11214:	e1520003 	cmp	r2, r3
+   11218:	3affffee 	bcc	111d8 <my_memcopy+0x2c>
 	*(dst+pos)=*(src+pos);
 
 	return dst;
-   1127c:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
+   1121c:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
 }
-   11280:	e1a00003 	mov	r0, r3
-   11284:	e24bd000 	sub	sp, fp, #0
-   11288:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
-   1128c:	e12fff1e 	bx	lr
+   11220:	e1a00003 	mov	r0, r3
+   11224:	e24bd000 	sub	sp, fp, #0
+   11228:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
+   1122c:	e12fff1e 	bx	lr
 
-00011290 <my_memset>:
+00011230 <my_memset>:
 
 uint8_t * my_memset(uint8_t * src, size_t length, uint8_t value){
-   11290:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
-   11294:	e28db000 	add	fp, sp, #0
-   11298:	e24dd01c 	sub	sp, sp, #28
-   1129c:	e50b0010 	str	r0, [fp, #-16]
-   112a0:	e50b1014 	str	r1, [fp, #-20]	; 0xffffffec
-   112a4:	e1a03002 	mov	r3, r2
-   112a8:	e54b3015 	strb	r3, [fp, #-21]	; 0xffffffeb
+   11230:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
+   11234:	e28db000 	add	fp, sp, #0
+   11238:	e24dd01c 	sub	sp, sp, #28
+   1123c:	e50b0010 	str	r0, [fp, #-16]
+   11240:	e50b1014 	str	r1, [fp, #-20]	; 0xffffffec
+   11244:	e1a03002 	mov	r3, r2
+   11248:	e54b3015 	strb	r3, [fp, #-21]	; 0xffffffeb
 	int8_t pos=0U;
-   112ac:	e3a03000 	mov	r3, #0
-   112b0:	e54b3005 	strb	r3, [fp, #-5]
+   1124c:	e3a03000 	mov	r3, #0
+   11250:	e54b3005 	strb	r3, [fp, #-5]
 	for(pos=0U;pos<length;pos++)
-   112b4:	e3a03000 	mov	r3, #0
-   112b8:	e54b3005 	strb	r3, [fp, #-5]
-   112bc:	ea000009 	b	112e8 <my_memset+0x58>
+   11254:	e3a03000 	mov	r3, #0
+   11258:	e54b3005 	strb	r3, [fp, #-5]
+   1125c:	ea000009 	b	11288 <my_memset+0x58>
 	*(src+pos)=value;
-   112c0:	e15b30d5 	ldrsb	r3, [fp, #-5]
-   112c4:	e51b2010 	ldr	r2, [fp, #-16]
-   112c8:	e0823003 	add	r3, r2, r3
-   112cc:	e55b2015 	ldrb	r2, [fp, #-21]	; 0xffffffeb
-   112d0:	e5c32000 	strb	r2, [r3]
+   11260:	e15b30d5 	ldrsb	r3, [fp, #-5]
+   11264:	e51b2010 	ldr	r2, [fp, #-16]
+   11268:	e0823003 	add	r3, r2, r3
+   1126c:	e55b2015 	ldrb	r2, [fp, #-21]	; 0xffffffeb
+   11270:	e5c32000 	strb	r2, [r3]
 	return dst;
 }
 
 uint8_t * my_memset(uint8_t * src, size_t length, uint8_t value){
 	int8_t pos=0U;
 	for(pos=0U;pos<length;pos++)
-   112d4:	e55b3005 	ldrb	r3, [fp, #-5]
-   112d8:	e6ef3073 	uxtb	r3, r3
-   112dc:	e2833001 	add	r3, r3, #1
-   112e0:	e6ef3073 	uxtb	r3, r3
-   112e4:	e54b3005 	strb	r3, [fp, #-5]
-   112e8:	e15b20d5 	ldrsb	r2, [fp, #-5]
-   112ec:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
-   112f0:	e1520003 	cmp	r2, r3
-   112f4:	3afffff1 	bcc	112c0 <my_memset+0x30>
+   11274:	e55b3005 	ldrb	r3, [fp, #-5]
+   11278:	e6ef3073 	uxtb	r3, r3
+   1127c:	e2833001 	add	r3, r3, #1
+   11280:	e6ef3073 	uxtb	r3, r3
+   11284:	e54b3005 	strb	r3, [fp, #-5]
+   11288:	e15b20d5 	ldrsb	r2, [fp, #-5]
+   1128c:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
+   11290:	e1520003 	cmp	r2, r3
+   11294:	3afffff1 	bcc	11260 <my_memset+0x30>
 	*(src+pos)=value;
 
 	return src;
-   112f8:	e51b3010 	ldr	r3, [fp, #-16]
+   11298:	e51b3010 	ldr	r3, [fp, #-16]
 }
-   112fc:	e1a00003 	mov	r0, r3
-   11300:	e24bd000 	sub	sp, fp, #0
-   11304:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
-   11308:	e12fff1e 	bx	lr
+   1129c:	e1a00003 	mov	r0, r3
+   112a0:	e24bd000 	sub	sp, fp, #0
+   112a4:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
+   112a8:	e12fff1e 	bx	lr
 
-0001130c <my_memzero>:
+000112ac <my_memzero>:
 
 uint8_t * my_memzero(uint8_t * src, size_t length){
-   1130c:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
-   11310:	e28db000 	add	fp, sp, #0
-   11314:	e24dd014 	sub	sp, sp, #20
-   11318:	e50b0010 	str	r0, [fp, #-16]
-   1131c:	e50b1014 	str	r1, [fp, #-20]	; 0xffffffec
+   112ac:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
+   112b0:	e28db000 	add	fp, sp, #0
+   112b4:	e24dd014 	sub	sp, sp, #20
+   112b8:	e50b0010 	str	r0, [fp, #-16]
+   112bc:	e50b1014 	str	r1, [fp, #-20]	; 0xffffffec
 	int8_t pos=0U;
-   11320:	e3a03000 	mov	r3, #0
-   11324:	e54b3005 	strb	r3, [fp, #-5]
+   112c0:	e3a03000 	mov	r3, #0
+   112c4:	e54b3005 	strb	r3, [fp, #-5]
 	for(pos=0U;pos<length;pos++)
-   11328:	e3a03000 	mov	r3, #0
-   1132c:	e54b3005 	strb	r3, [fp, #-5]
-   11330:	ea000009 	b	1135c <my_memzero+0x50>
+   112c8:	e3a03000 	mov	r3, #0
+   112cc:	e54b3005 	strb	r3, [fp, #-5]
+   112d0:	ea000009 	b	112fc <my_memzero+0x50>
 	*(src+pos)=0;
-   11334:	e15b30d5 	ldrsb	r3, [fp, #-5]
-   11338:	e51b2010 	ldr	r2, [fp, #-16]
-   1133c:	e0823003 	add	r3, r2, r3
-   11340:	e3a02000 	mov	r2, #0
-   11344:	e5c32000 	strb	r2, [r3]
+   112d4:	e15b30d5 	ldrsb	r3, [fp, #-5]
+   112d8:	e51b2010 	ldr	r2, [fp, #-16]
+   112dc:	e0823003 	add	r3, r2, r3
+   112e0:	e3a02000 	mov	r2, #0
+   112e4:	e5c32000 	strb	r2, [r3]
 	return src;
 }
 
 uint8_t * my_memzero(uint8_t * src, size_t length){
 	int8_t pos=0U;
 	for(pos=0U;pos<length;pos++)
-   11348:	e55b3005 	ldrb	r3, [fp, #-5]
-   1134c:	e6ef3073 	uxtb	r3, r3
-   11350:	e2833001 	add	r3, r3, #1
-   11354:	e6ef3073 	uxtb	r3, r3
-   11358:	e54b3005 	strb	r3, [fp, #-5]
-   1135c:	e15b20d5 	ldrsb	r2, [fp, #-5]
-   11360:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
-   11364:	e1520003 	cmp	r2, r3
-   11368:	3afffff1 	bcc	11334 <my_memzero+0x28>
+   112e8:	e55b3005 	ldrb	r3, [fp, #-5]
+   112ec:	e6ef3073 	uxtb	r3, r3
+   112f0:	e2833001 	add	r3, r3, #1
+   112f4:	e6ef3073 	uxtb	r3, r3
+   112f8:	e54b3005 	strb	r3, [fp, #-5]
+   112fc:	e15b20d5 	ldrsb	r2, [fp, #-5]
+   11300:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
+   11304:	e1520003 	cmp	r2, r3
+   11308:	3afffff1 	bcc	112d4 <my_memzero+0x28>
 	*(src+pos)=0;
 
 	return src;
-   1136c:	e51b3010 	ldr	r3, [fp, #-16]
+   1130c:	e51b3010 	ldr	r3, [fp, #-16]
 }
-   11370:	e1a00003 	mov	r0, r3
-   11374:	e24bd000 	sub	sp, fp, #0
-   11378:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
-   1137c:	e12fff1e 	bx	lr
+   11310:	e1a00003 	mov	r0, r3
+   11314:	e24bd000 	sub	sp, fp, #0
+   11318:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
+   1131c:	e12fff1e 	bx	lr
 
-00011380 <my_reverse>:
+00011320 <my_reverse>:
 
 uint8_t * my_reverse(uint8_t * src, size_t length){
-   11380:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
-   11384:	e28db000 	add	fp, sp, #0
-   11388:	e24dd014 	sub	sp, sp, #20
-   1138c:	e50b0010 	str	r0, [fp, #-16]
-   11390:	e50b1014 	str	r1, [fp, #-20]	; 0xffffffec
-	uint32_t temp=0U;
-   11394:	e3a03000 	mov	r3, #0
-   11398:	e50b300c 	str	r3, [fp, #-12]
+   11320:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
+   11324:	e28db000 	add	fp, sp, #0
+   11328:	e24dd014 	sub	sp, sp, #20
+   1132c:	e50b0010 	str	r0, [fp, #-16]
+   11330:	e50b1014 	str	r1, [fp, #-20]	; 0xffffffec
+	uint8_t temp=0U;
+   11334:	e3a03000 	mov	r3, #0
+   11338:	e54b3006 	strb	r3, [fp, #-6]
 	int8_t pos=0U;
-   1139c:	e3a03000 	mov	r3, #0
-   113a0:	e54b3005 	strb	r3, [fp, #-5]
+   1133c:	e3a03000 	mov	r3, #0
+   11340:	e54b3005 	strb	r3, [fp, #-5]
 
 	for(pos=0U;pos<length;pos++){
-   113a4:	e3a03000 	mov	r3, #0
-   113a8:	e54b3005 	strb	r3, [fp, #-5]
-   113ac:	ea000024 	b	11444 <my_reverse+0xc4>
+   11344:	e3a03000 	mov	r3, #0
+   11348:	e54b3005 	strb	r3, [fp, #-5]
+   1134c:	ea000023 	b	113e0 <my_reverse+0xc0>
 		if(pos < (length-1-pos)){
-   113b0:	e15b20d5 	ldrsb	r2, [fp, #-5]
-   113b4:	e15b30d5 	ldrsb	r3, [fp, #-5]
-   113b8:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
-   113bc:	e0633001 	rsb	r3, r3, r1
-   113c0:	e2433001 	sub	r3, r3, #1
-   113c4:	e1520003 	cmp	r2, r3
-   113c8:	2a000018 	bcs	11430 <my_reverse+0xb0>
+   11350:	e15b20d5 	ldrsb	r2, [fp, #-5]
+   11354:	e15b30d5 	ldrsb	r3, [fp, #-5]
+   11358:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
+   1135c:	e0633001 	rsb	r3, r3, r1
+   11360:	e2433001 	sub	r3, r3, #1
+   11364:	e1520003 	cmp	r2, r3
+   11368:	2a000017 	bcs	113cc <my_reverse+0xac>
 	temp=*(src+pos);
-   113cc:	e15b30d5 	ldrsb	r3, [fp, #-5]
-   113d0:	e51b2010 	ldr	r2, [fp, #-16]
-   113d4:	e0823003 	add	r3, r2, r3
-   113d8:	e5d33000 	ldrb	r3, [r3]
-   113dc:	e50b300c 	str	r3, [fp, #-12]
+   1136c:	e15b30d5 	ldrsb	r3, [fp, #-5]
+   11370:	e51b2010 	ldr	r2, [fp, #-16]
+   11374:	e0823003 	add	r3, r2, r3
+   11378:	e5d33000 	ldrb	r3, [r3]
+   1137c:	e54b3006 	strb	r3, [fp, #-6]
 	*(src+pos)=*(src+length-1-pos);
-   113e0:	e15b30d5 	ldrsb	r3, [fp, #-5]
-   113e4:	e51b2010 	ldr	r2, [fp, #-16]
-   113e8:	e0823003 	add	r3, r2, r3
-   113ec:	e15b20d5 	ldrsb	r2, [fp, #-5]
-   113f0:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
-   113f4:	e0622001 	rsb	r2, r2, r1
-   113f8:	e2422001 	sub	r2, r2, #1
-   113fc:	e51b1010 	ldr	r1, [fp, #-16]
-   11400:	e0812002 	add	r2, r1, r2
-   11404:	e5d22000 	ldrb	r2, [r2]
-   11408:	e5c32000 	strb	r2, [r3]
+   11380:	e15b30d5 	ldrsb	r3, [fp, #-5]
+   11384:	e51b2010 	ldr	r2, [fp, #-16]
+   11388:	e0823003 	add	r3, r2, r3
+   1138c:	e15b20d5 	ldrsb	r2, [fp, #-5]
+   11390:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
+   11394:	e0622001 	rsb	r2, r2, r1
+   11398:	e2422001 	sub	r2, r2, #1
+   1139c:	e51b1010 	ldr	r1, [fp, #-16]
+   113a0:	e0812002 	add	r2, r1, r2
+   113a4:	e5d22000 	ldrb	r2, [r2]
+   113a8:	e5c32000 	strb	r2, [r3]
 	*(src+length-1-pos)=temp;
-   1140c:	e15b30d5 	ldrsb	r3, [fp, #-5]
-   11410:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
-   11414:	e0633002 	rsb	r3, r3, r2
-   11418:	e2433001 	sub	r3, r3, #1
-   1141c:	e51b2010 	ldr	r2, [fp, #-16]
-   11420:	e0823003 	add	r3, r2, r3
-   11424:	e51b200c 	ldr	r2, [fp, #-12]
-   11428:	e6ef2072 	uxtb	r2, r2
-   1142c:	e5c32000 	strb	r2, [r3]
+   113ac:	e15b30d5 	ldrsb	r3, [fp, #-5]
+   113b0:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   113b4:	e0633002 	rsb	r3, r3, r2
+   113b8:	e2433001 	sub	r3, r3, #1
+   113bc:	e51b2010 	ldr	r2, [fp, #-16]
+   113c0:	e0823003 	add	r3, r2, r3
+   113c4:	e55b2006 	ldrb	r2, [fp, #-6]
+   113c8:	e5c32000 	strb	r2, [r3]
 
 uint8_t * my_reverse(uint8_t * src, size_t length){
-	uint32_t temp=0U;
+	uint8_t temp=0U;
 	int8_t pos=0U;
 
 	for(pos=0U;pos<length;pos++){
-   11430:	e55b3005 	ldrb	r3, [fp, #-5]
-   11434:	e6ef3073 	uxtb	r3, r3
-   11438:	e2833001 	add	r3, r3, #1
-   1143c:	e6ef3073 	uxtb	r3, r3
-   11440:	e54b3005 	strb	r3, [fp, #-5]
-   11444:	e15b20d5 	ldrsb	r2, [fp, #-5]
-   11448:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
-   1144c:	e1520003 	cmp	r2, r3
-   11450:	3affffd6 	bcc	113b0 <my_reverse+0x30>
+   113cc:	e55b3005 	ldrb	r3, [fp, #-5]
+   113d0:	e6ef3073 	uxtb	r3, r3
+   113d4:	e2833001 	add	r3, r3, #1
+   113d8:	e6ef3073 	uxtb	r3, r3
+   113dc:	e54b3005 	strb	r3, [fp, #-5]
+   113e0:	e15b20d5 	ldrsb	r2, [fp, #-5]
+   113e4:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
+   113e8:	e1520003 	cmp	r2, r3
+   113ec:	3affffd7 	bcc	11350 <my_reverse+0x30>
 	temp=*(src+pos);
 	*(src+pos)=*(src+length-1-pos);
 	*(src+length-1-pos)=temp;
 		}
 	}
 	return src;
-   11454:	e51b3010 	ldr	r3, [fp, #-16]
+   113f0:	e51b3010 	ldr	r3, [fp, #-16]
 }
-   11458:	e1a00003 	mov	r0, r3
-   1145c:	e24bd000 	sub	sp, fp, #0
-   11460:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
-   11464:	e12fff1e 	bx	lr
+   113f4:	e1a00003 	mov	r0, r3
+   113f8:	e24bd000 	sub	sp, fp, #0
+   113fc:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
+   11400:	e12fff1e 	bx	lr
 
-00011468 <reserve_words>:
+00011404 <reserve_words>:
 
 uint32_t * reserve_words(size_t length){
-   11468:	e92d4800 	push	{fp, lr}
-   1146c:	e28db004 	add	fp, sp, #4
-   11470:	e24dd010 	sub	sp, sp, #16
-   11474:	e50b0010 	str	r0, [fp, #-16]
+   11404:	e92d4800 	push	{fp, lr}
+   11408:	e28db004 	add	fp, sp, #4
+   1140c:	e24dd010 	sub	sp, sp, #16
+   11410:	e50b0010 	str	r0, [fp, #-16]
 	uint32_t * ptr;
 
 	ptr= (uint32_t*)malloc(length);
-   11478:	e51b0010 	ldr	r0, [fp, #-16]
-   1147c:	ebfffbf7 	bl	10460 <malloc@plt>
-   11480:	e1a03000 	mov	r3, r0
-   11484:	e50b3008 	str	r3, [fp, #-8]
-
+   11414:	e51b0010 	ldr	r0, [fp, #-16]
+   11418:	ebfffc10 	bl	10460 <malloc@plt>
+   1141c:	e1a03000 	mov	r3, r0
+   11420:	e50b3008 	str	r3, [fp, #-8]
+	if(!ptr)return NULL;
+   11424:	e51b3008 	ldr	r3, [fp, #-8]
+   11428:	e3530000 	cmp	r3, #0
+   1142c:	1a000001 	bne	11438 <reserve_words+0x34>
+   11430:	e3a03000 	mov	r3, #0
+   11434:	ea000000 	b	1143c <reserve_words+0x38>
 	return ptr;
-   11488:	e51b3008 	ldr	r3, [fp, #-8]
+   11438:	e51b3008 	ldr	r3, [fp, #-8]
 }
-   1148c:	e1a00003 	mov	r0, r3
-   11490:	e24bd004 	sub	sp, fp, #4
-   11494:	e8bd8800 	pop	{fp, pc}
+   1143c:	e1a00003 	mov	r0, r3
+   11440:	e24bd004 	sub	sp, fp, #4
+   11444:	e8bd8800 	pop	{fp, pc}
 
-00011498 <free_words>:
+00011448 <free_words>:
 
 void free_words(uint32_t * src){
-   11498:	e92d4800 	push	{fp, lr}
-   1149c:	e28db004 	add	fp, sp, #4
-   114a0:	e24dd008 	sub	sp, sp, #8
-   114a4:	e50b0008 	str	r0, [fp, #-8]
+   11448:	e92d4800 	push	{fp, lr}
+   1144c:	e28db004 	add	fp, sp, #4
+   11450:	e24dd008 	sub	sp, sp, #8
+   11454:	e50b0008 	str	r0, [fp, #-8]
 	free((void*)src);
-   114a8:	e51b0008 	ldr	r0, [fp, #-8]
-   114ac:	ebfffbe2 	bl	1043c <free@plt>
+   11458:	e51b0008 	ldr	r0, [fp, #-8]
+   1145c:	ebfffbf6 	bl	1043c <free@plt>
 }
-   114b0:	e24bd004 	sub	sp, fp, #4
-   114b4:	e8bd8800 	pop	{fp, pc}
+   11460:	e24bd004 	sub	sp, fp, #4
+   11464:	e8bd8800 	pop	{fp, pc}
 
-000114b8 <print_statistics>:
+00011468 <print_statistics>:
   printf("=========Statistic data of array=============\n");
   print_statistics (statistic);
 }
 */
 
 void print_statistics ( STAT s){
-   114b8:	e92d4800 	push	{fp, lr}
-   114bc:	e28db004 	add	fp, sp, #4
-   114c0:	e24dd008 	sub	sp, sp, #8
-   114c4:	e50b0008 	str	r0, [fp, #-8]
+   11468:	e92d4800 	push	{fp, lr}
+   1146c:	e28db004 	add	fp, sp, #4
+   11470:	e24dd008 	sub	sp, sp, #8
+   11474:	e50b0008 	str	r0, [fp, #-8]
 
 	printf("Max value od data = %d \n",s.max);
-   114c8:	e55b3006 	ldrb	r3, [fp, #-6]
-   114cc:	e59f003c 	ldr	r0, [pc, #60]	; 11510 <print_statistics+0x58>
-   114d0:	e1a01003 	mov	r1, r3
-   114d4:	ebfffbd5 	bl	10430 <printf@plt>
+   11478:	e55b3006 	ldrb	r3, [fp, #-6]
+   1147c:	e59f003c 	ldr	r0, [pc, #60]	; 114c0 <print_statistics+0x58>
+   11480:	e1a01003 	mov	r1, r3
+   11484:	ebfffbe9 	bl	10430 <printf@plt>
 	printf("Min value od data = %d \n",s.min);
-   114d8:	e55b3005 	ldrb	r3, [fp, #-5]
-   114dc:	e59f0030 	ldr	r0, [pc, #48]	; 11514 <print_statistics+0x5c>
-   114e0:	e1a01003 	mov	r1, r3
-   114e4:	ebfffbd1 	bl	10430 <printf@plt>
+   11488:	e55b3005 	ldrb	r3, [fp, #-5]
+   1148c:	e59f0030 	ldr	r0, [pc, #48]	; 114c4 <print_statistics+0x5c>
+   11490:	e1a01003 	mov	r1, r3
+   11494:	ebfffbe5 	bl	10430 <printf@plt>
 	printf("Mean value od data = %d \n",s.mean);
-   114e8:	e55b3007 	ldrb	r3, [fp, #-7]
-   114ec:	e59f0024 	ldr	r0, [pc, #36]	; 11518 <print_statistics+0x60>
-   114f0:	e1a01003 	mov	r1, r3
-   114f4:	ebfffbcd 	bl	10430 <printf@plt>
+   11498:	e55b3007 	ldrb	r3, [fp, #-7]
+   1149c:	e59f0024 	ldr	r0, [pc, #36]	; 114c8 <print_statistics+0x60>
+   114a0:	e1a01003 	mov	r1, r3
+   114a4:	ebfffbe1 	bl	10430 <printf@plt>
 	printf("Median value od data = %d \n",s.median);
-   114f8:	e55b3008 	ldrb	r3, [fp, #-8]
-   114fc:	e59f0018 	ldr	r0, [pc, #24]	; 1151c <print_statistics+0x64>
-   11500:	e1a01003 	mov	r1, r3
-   11504:	ebfffbc9 	bl	10430 <printf@plt>
+   114a8:	e55b3008 	ldrb	r3, [fp, #-8]
+   114ac:	e59f0018 	ldr	r0, [pc, #24]	; 114cc <print_statistics+0x64>
+   114b0:	e1a01003 	mov	r1, r3
+   114b4:	ebfffbdd 	bl	10430 <printf@plt>
 
 }
-   11508:	e24bd004 	sub	sp, fp, #4
-   1150c:	e8bd8800 	pop	{fp, pc}
-   11510:	0001237c 	.word	0x0001237c
-   11514:	00012398 	.word	0x00012398
-   11518:	000123b4 	.word	0x000123b4
-   1151c:	000123d0 	.word	0x000123d0
+   114b8:	e24bd004 	sub	sp, fp, #4
+   114bc:	e8bd8800 	pop	{fp, pc}
+   114c0:	00012300 	.word	0x00012300
+   114c4:	0001231c 	.word	0x0001231c
+   114c8:	00012338 	.word	0x00012338
+   114cc:	00012354 	.word	0x00012354
 
-00011520 <print_array>:
+000114d0 <print_array>:
 
 void print_array (unsigned char *arr,char size){
-   11520:	e92d4800 	push	{fp, lr}
-   11524:	e28db004 	add	fp, sp, #4
-   11528:	e24dd010 	sub	sp, sp, #16
-   1152c:	e50b0010 	str	r0, [fp, #-16]
-   11530:	e1a03001 	mov	r3, r1
-   11534:	e54b3011 	strb	r3, [fp, #-17]	; 0xffffffef
+   114d0:	e92d4800 	push	{fp, lr}
+   114d4:	e28db004 	add	fp, sp, #4
+   114d8:	e24dd010 	sub	sp, sp, #16
+   114dc:	e50b0010 	str	r0, [fp, #-16]
+   114e0:	e1a03001 	mov	r3, r1
+   114e4:	e54b3011 	strb	r3, [fp, #-17]	; 0xffffffef
 unsigned int i=0U;
-   11538:	e3a03000 	mov	r3, #0
-   1153c:	e50b3008 	str	r3, [fp, #-8]
+   114e8:	e3a03000 	mov	r3, #0
+   114ec:	e50b3008 	str	r3, [fp, #-8]
 
 #ifdef VERBOSE
  for (i=0;i<size;i++)
-   11540:	e3a03000 	mov	r3, #0
-   11544:	e50b3008 	str	r3, [fp, #-8]
-   11548:	ea00000a 	b	11578 <print_array+0x58>
+   114f0:	e3a03000 	mov	r3, #0
+   114f4:	e50b3008 	str	r3, [fp, #-8]
+   114f8:	ea00000a 	b	11528 <print_array+0x58>
 	PRINTF("index=%d \t value=%d \n",i,*(arr+i));
-   1154c:	e51b2010 	ldr	r2, [fp, #-16]
-   11550:	e51b3008 	ldr	r3, [fp, #-8]
-   11554:	e0823003 	add	r3, r2, r3
-   11558:	e5d33000 	ldrb	r3, [r3]
-   1155c:	e59f002c 	ldr	r0, [pc, #44]	; 11590 <print_array+0x70>
-   11560:	e51b1008 	ldr	r1, [fp, #-8]
-   11564:	e1a02003 	mov	r2, r3
-   11568:	ebfffbb0 	bl	10430 <printf@plt>
+   114fc:	e51b2010 	ldr	r2, [fp, #-16]
+   11500:	e51b3008 	ldr	r3, [fp, #-8]
+   11504:	e0823003 	add	r3, r2, r3
+   11508:	e5d33000 	ldrb	r3, [r3]
+   1150c:	e59f002c 	ldr	r0, [pc, #44]	; 11540 <print_array+0x70>
+   11510:	e51b1008 	ldr	r1, [fp, #-8]
+   11514:	e1a02003 	mov	r2, r3
+   11518:	ebfffbc4 	bl	10430 <printf@plt>
 
 void print_array (unsigned char *arr,char size){
 unsigned int i=0U;
 
 #ifdef VERBOSE
  for (i=0;i<size;i++)
-   1156c:	e51b3008 	ldr	r3, [fp, #-8]
-   11570:	e2833001 	add	r3, r3, #1
-   11574:	e50b3008 	str	r3, [fp, #-8]
-   11578:	e55b2011 	ldrb	r2, [fp, #-17]	; 0xffffffef
-   1157c:	e51b3008 	ldr	r3, [fp, #-8]
-   11580:	e1520003 	cmp	r2, r3
-   11584:	8afffff0 	bhi	1154c <print_array+0x2c>
+   1151c:	e51b3008 	ldr	r3, [fp, #-8]
+   11520:	e2833001 	add	r3, r3, #1
+   11524:	e50b3008 	str	r3, [fp, #-8]
+   11528:	e55b2011 	ldrb	r2, [fp, #-17]	; 0xffffffef
+   1152c:	e51b3008 	ldr	r3, [fp, #-8]
+   11530:	e1520003 	cmp	r2, r3
+   11534:	8afffff0 	bhi	114fc <print_array+0x2c>
 	PRINTF("index=%d \t value=%d \n",i,*(arr+i));
 #endif
 }
-   11588:	e24bd004 	sub	sp, fp, #4
-   1158c:	e8bd8800 	pop	{fp, pc}
-   11590:	000123ec 	.word	0x000123ec
+   11538:	e24bd004 	sub	sp, fp, #4
+   1153c:	e8bd8800 	pop	{fp, pc}
+   11540:	00012370 	.word	0x00012370
 
-00011594 <find_median>:
+00011544 <find_median>:
 
 int find_median (unsigned char *arr,char size){
-   11594:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
-   11598:	e28db000 	add	fp, sp, #0
-   1159c:	e24dd014 	sub	sp, sp, #20
-   115a0:	e50b0010 	str	r0, [fp, #-16]
-   115a4:	e1a03001 	mov	r3, r1
-   115a8:	e54b3011 	strb	r3, [fp, #-17]	; 0xffffffef
+   11544:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
+   11548:	e28db000 	add	fp, sp, #0
+   1154c:	e24dd014 	sub	sp, sp, #20
+   11550:	e50b0010 	str	r0, [fp, #-16]
+   11554:	e1a03001 	mov	r3, r1
+   11558:	e54b3011 	strb	r3, [fp, #-17]	; 0xffffffef
 unsigned char  median;
  if(size%2==0U)
-   115ac:	e55b3011 	ldrb	r3, [fp, #-17]	; 0xffffffef
-   115b0:	e2033001 	and	r3, r3, #1
-   115b4:	e6ef3073 	uxtb	r3, r3
-   115b8:	e3530000 	cmp	r3, #0
-   115bc:	1a000014 	bne	11614 <find_median+0x80>
+   1155c:	e55b3011 	ldrb	r3, [fp, #-17]	; 0xffffffef
+   11560:	e2033001 	and	r3, r3, #1
+   11564:	e6ef3073 	uxtb	r3, r3
+   11568:	e3530000 	cmp	r3, #0
+   1156c:	1a000014 	bne	115c4 <find_median+0x80>
 	median=(*(arr+size/2)+*(arr+1+size/2))/2;
-   115c0:	e55b3011 	ldrb	r3, [fp, #-17]	; 0xffffffef
-   115c4:	e1a030a3 	lsr	r3, r3, #1
-   115c8:	e6ef3073 	uxtb	r3, r3
-   115cc:	e1a02003 	mov	r2, r3
-   115d0:	e51b3010 	ldr	r3, [fp, #-16]
-   115d4:	e0833002 	add	r3, r3, r2
-   115d8:	e5d33000 	ldrb	r3, [r3]
-   115dc:	e1a01003 	mov	r1, r3
-   115e0:	e55b3011 	ldrb	r3, [fp, #-17]	; 0xffffffef
-   115e4:	e1a030a3 	lsr	r3, r3, #1
-   115e8:	e6ef3073 	uxtb	r3, r3
-   115ec:	e2833001 	add	r3, r3, #1
-   115f0:	e51b2010 	ldr	r2, [fp, #-16]
-   115f4:	e0823003 	add	r3, r2, r3
-   115f8:	e5d33000 	ldrb	r3, [r3]
-   115fc:	e0813003 	add	r3, r1, r3
-   11600:	e1a02fa3 	lsr	r2, r3, #31
-   11604:	e0823003 	add	r3, r2, r3
-   11608:	e1a030c3 	asr	r3, r3, #1
-   1160c:	e54b3005 	strb	r3, [fp, #-5]
-   11610:	ea000001 	b	1161c <find_median+0x88>
+   11570:	e55b3011 	ldrb	r3, [fp, #-17]	; 0xffffffef
+   11574:	e1a030a3 	lsr	r3, r3, #1
+   11578:	e6ef3073 	uxtb	r3, r3
+   1157c:	e1a02003 	mov	r2, r3
+   11580:	e51b3010 	ldr	r3, [fp, #-16]
+   11584:	e0833002 	add	r3, r3, r2
+   11588:	e5d33000 	ldrb	r3, [r3]
+   1158c:	e1a01003 	mov	r1, r3
+   11590:	e55b3011 	ldrb	r3, [fp, #-17]	; 0xffffffef
+   11594:	e1a030a3 	lsr	r3, r3, #1
+   11598:	e6ef3073 	uxtb	r3, r3
+   1159c:	e2833001 	add	r3, r3, #1
+   115a0:	e51b2010 	ldr	r2, [fp, #-16]
+   115a4:	e0823003 	add	r3, r2, r3
+   115a8:	e5d33000 	ldrb	r3, [r3]
+   115ac:	e0813003 	add	r3, r1, r3
+   115b0:	e1a02fa3 	lsr	r2, r3, #31
+   115b4:	e0823003 	add	r3, r2, r3
+   115b8:	e1a030c3 	asr	r3, r3, #1
+   115bc:	e54b3005 	strb	r3, [fp, #-5]
+   115c0:	ea000001 	b	115cc <find_median+0x88>
  else median=-1;
-   11614:	e3e03000 	mvn	r3, #0
-   11618:	e54b3005 	strb	r3, [fp, #-5]
+   115c4:	e3e03000 	mvn	r3, #0
+   115c8:	e54b3005 	strb	r3, [fp, #-5]
 return median;
-   1161c:	e55b3005 	ldrb	r3, [fp, #-5]
+   115cc:	e55b3005 	ldrb	r3, [fp, #-5]
 }
-   11620:	e1a00003 	mov	r0, r3
-   11624:	e24bd000 	sub	sp, fp, #0
-   11628:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
-   1162c:	e12fff1e 	bx	lr
+   115d0:	e1a00003 	mov	r0, r3
+   115d4:	e24bd000 	sub	sp, fp, #0
+   115d8:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
+   115dc:	e12fff1e 	bx	lr
 
-00011630 <find_mean>:
+000115e0 <find_mean>:
 
 char find_mean (unsigned char *arr,char size){
-   11630:	e92d4800 	push	{fp, lr}
-   11634:	e28db004 	add	fp, sp, #4
-   11638:	e24dd010 	sub	sp, sp, #16
-   1163c:	e50b0010 	str	r0, [fp, #-16]
-   11640:	e1a03001 	mov	r3, r1
-   11644:	e54b3011 	strb	r3, [fp, #-17]	; 0xffffffef
+   115e0:	e92d4800 	push	{fp, lr}
+   115e4:	e28db004 	add	fp, sp, #4
+   115e8:	e24dd010 	sub	sp, sp, #16
+   115ec:	e50b0010 	str	r0, [fp, #-16]
+   115f0:	e1a03001 	mov	r3, r1
+   115f4:	e54b3011 	strb	r3, [fp, #-17]	; 0xffffffef
 
 unsigned int i=0U;
-   11648:	e3a03000 	mov	r3, #0
-   1164c:	e50b3008 	str	r3, [fp, #-8]
+   115f8:	e3a03000 	mov	r3, #0
+   115fc:	e50b3008 	str	r3, [fp, #-8]
 unsigned int mean=0U;
-   11650:	e3a03000 	mov	r3, #0
-   11654:	e50b300c 	str	r3, [fp, #-12]
+   11600:	e3a03000 	mov	r3, #0
+   11604:	e50b300c 	str	r3, [fp, #-12]
 
  for(i=0;i<size;i++)
-   11658:	e3a03000 	mov	r3, #0
-   1165c:	e50b3008 	str	r3, [fp, #-8]
-   11660:	ea00000a 	b	11690 <find_mean+0x60>
+   11608:	e3a03000 	mov	r3, #0
+   1160c:	e50b3008 	str	r3, [fp, #-8]
+   11610:	ea00000a 	b	11640 <find_mean+0x60>
   	mean+=*(arr+i);
-   11664:	e51b2010 	ldr	r2, [fp, #-16]
-   11668:	e51b3008 	ldr	r3, [fp, #-8]
-   1166c:	e0823003 	add	r3, r2, r3
-   11670:	e5d33000 	ldrb	r3, [r3]
-   11674:	e1a02003 	mov	r2, r3
-   11678:	e51b300c 	ldr	r3, [fp, #-12]
-   1167c:	e0833002 	add	r3, r3, r2
-   11680:	e50b300c 	str	r3, [fp, #-12]
+   11614:	e51b2010 	ldr	r2, [fp, #-16]
+   11618:	e51b3008 	ldr	r3, [fp, #-8]
+   1161c:	e0823003 	add	r3, r2, r3
+   11620:	e5d33000 	ldrb	r3, [r3]
+   11624:	e1a02003 	mov	r2, r3
+   11628:	e51b300c 	ldr	r3, [fp, #-12]
+   1162c:	e0833002 	add	r3, r3, r2
+   11630:	e50b300c 	str	r3, [fp, #-12]
 char find_mean (unsigned char *arr,char size){
 
 unsigned int i=0U;
 unsigned int mean=0U;
 
  for(i=0;i<size;i++)
-   11684:	e51b3008 	ldr	r3, [fp, #-8]
-   11688:	e2833001 	add	r3, r3, #1
-   1168c:	e50b3008 	str	r3, [fp, #-8]
-   11690:	e55b2011 	ldrb	r2, [fp, #-17]	; 0xffffffef
-   11694:	e51b3008 	ldr	r3, [fp, #-8]
-   11698:	e1520003 	cmp	r2, r3
-   1169c:	8afffff0 	bhi	11664 <find_mean+0x34>
+   11634:	e51b3008 	ldr	r3, [fp, #-8]
+   11638:	e2833001 	add	r3, r3, #1
+   1163c:	e50b3008 	str	r3, [fp, #-8]
+   11640:	e55b2011 	ldrb	r2, [fp, #-17]	; 0xffffffef
+   11644:	e51b3008 	ldr	r3, [fp, #-8]
+   11648:	e1520003 	cmp	r2, r3
+   1164c:	8afffff0 	bhi	11614 <find_mean+0x34>
   	mean+=*(arr+i);
  
 mean/=size;
-   116a0:	e55b3011 	ldrb	r3, [fp, #-17]	; 0xffffffef
-   116a4:	e51b000c 	ldr	r0, [fp, #-12]
-   116a8:	e1a01003 	mov	r1, r3
-   116ac:	eb000210 	bl	11ef4 <__aeabi_uidiv>
-   116b0:	e1a03000 	mov	r3, r0
-   116b4:	e50b300c 	str	r3, [fp, #-12]
+   11650:	e55b3011 	ldrb	r3, [fp, #-17]	; 0xffffffef
+   11654:	e51b000c 	ldr	r0, [fp, #-12]
+   11658:	e1a01003 	mov	r1, r3
+   1165c:	eb000210 	bl	11ea4 <__aeabi_uidiv>
+   11660:	e1a03000 	mov	r3, r0
+   11664:	e50b300c 	str	r3, [fp, #-12]
 return (char)mean;
-   116b8:	e51b300c 	ldr	r3, [fp, #-12]
-   116bc:	e6ef3073 	uxtb	r3, r3
+   11668:	e51b300c 	ldr	r3, [fp, #-12]
+   1166c:	e6ef3073 	uxtb	r3, r3
 }
-   116c0:	e1a00003 	mov	r0, r3
-   116c4:	e24bd004 	sub	sp, fp, #4
-   116c8:	e8bd8800 	pop	{fp, pc}
+   11670:	e1a00003 	mov	r0, r3
+   11674:	e24bd004 	sub	sp, fp, #4
+   11678:	e8bd8800 	pop	{fp, pc}
 
-000116cc <find_maximum>:
+0001167c <find_maximum>:
 
 int find_maximum (unsigned char *arr, char size){
-   116cc:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
-   116d0:	e28db000 	add	fp, sp, #0
-   116d4:	e24dd014 	sub	sp, sp, #20
-   116d8:	e50b0010 	str	r0, [fp, #-16]
-   116dc:	e1a03001 	mov	r3, r1
-   116e0:	e54b3011 	strb	r3, [fp, #-17]	; 0xffffffef
+   1167c:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
+   11680:	e28db000 	add	fp, sp, #0
+   11684:	e24dd014 	sub	sp, sp, #20
+   11688:	e50b0010 	str	r0, [fp, #-16]
+   1168c:	e1a03001 	mov	r3, r1
+   11690:	e54b3011 	strb	r3, [fp, #-17]	; 0xffffffef
 unsigned int i=0U;
-   116e4:	e3a03000 	mov	r3, #0
-   116e8:	e50b3008 	str	r3, [fp, #-8]
+   11694:	e3a03000 	mov	r3, #0
+   11698:	e50b3008 	str	r3, [fp, #-8]
 unsigned char max=0U;
-   116ec:	e3a03000 	mov	r3, #0
-   116f0:	e54b3009 	strb	r3, [fp, #-9]
+   1169c:	e3a03000 	mov	r3, #0
+   116a0:	e54b3009 	strb	r3, [fp, #-9]
 max=*arr;
-   116f4:	e51b3010 	ldr	r3, [fp, #-16]
-   116f8:	e5d33000 	ldrb	r3, [r3]
-   116fc:	e54b3009 	strb	r3, [fp, #-9]
+   116a4:	e51b3010 	ldr	r3, [fp, #-16]
+   116a8:	e5d33000 	ldrb	r3, [r3]
+   116ac:	e54b3009 	strb	r3, [fp, #-9]
  for(i=0;i<size;i++){
-   11700:	e3a03000 	mov	r3, #0
-   11704:	e50b3008 	str	r3, [fp, #-8]
-   11708:	ea00000e 	b	11748 <find_maximum+0x7c>
+   116b0:	e3a03000 	mov	r3, #0
+   116b4:	e50b3008 	str	r3, [fp, #-8]
+   116b8:	ea00000e 	b	116f8 <find_maximum+0x7c>
   if(max<=*(arr+i))max=*(arr+i);
-   1170c:	e51b2010 	ldr	r2, [fp, #-16]
-   11710:	e51b3008 	ldr	r3, [fp, #-8]
-   11714:	e0823003 	add	r3, r2, r3
-   11718:	e5d33000 	ldrb	r3, [r3]
-   1171c:	e55b2009 	ldrb	r2, [fp, #-9]
-   11720:	e1520003 	cmp	r2, r3
-   11724:	8a000004 	bhi	1173c <find_maximum+0x70>
-   11728:	e51b2010 	ldr	r2, [fp, #-16]
-   1172c:	e51b3008 	ldr	r3, [fp, #-8]
-   11730:	e0823003 	add	r3, r2, r3
-   11734:	e5d33000 	ldrb	r3, [r3]
-   11738:	e54b3009 	strb	r3, [fp, #-9]
+   116bc:	e51b2010 	ldr	r2, [fp, #-16]
+   116c0:	e51b3008 	ldr	r3, [fp, #-8]
+   116c4:	e0823003 	add	r3, r2, r3
+   116c8:	e5d33000 	ldrb	r3, [r3]
+   116cc:	e55b2009 	ldrb	r2, [fp, #-9]
+   116d0:	e1520003 	cmp	r2, r3
+   116d4:	8a000004 	bhi	116ec <find_maximum+0x70>
+   116d8:	e51b2010 	ldr	r2, [fp, #-16]
+   116dc:	e51b3008 	ldr	r3, [fp, #-8]
+   116e0:	e0823003 	add	r3, r2, r3
+   116e4:	e5d33000 	ldrb	r3, [r3]
+   116e8:	e54b3009 	strb	r3, [fp, #-9]
 
 int find_maximum (unsigned char *arr, char size){
 unsigned int i=0U;
 unsigned char max=0U;
 max=*arr;
  for(i=0;i<size;i++){
-   1173c:	e51b3008 	ldr	r3, [fp, #-8]
-   11740:	e2833001 	add	r3, r3, #1
-   11744:	e50b3008 	str	r3, [fp, #-8]
-   11748:	e55b2011 	ldrb	r2, [fp, #-17]	; 0xffffffef
-   1174c:	e51b3008 	ldr	r3, [fp, #-8]
-   11750:	e1520003 	cmp	r2, r3
-   11754:	8affffec 	bhi	1170c <find_maximum+0x40>
+   116ec:	e51b3008 	ldr	r3, [fp, #-8]
+   116f0:	e2833001 	add	r3, r3, #1
+   116f4:	e50b3008 	str	r3, [fp, #-8]
+   116f8:	e55b2011 	ldrb	r2, [fp, #-17]	; 0xffffffef
+   116fc:	e51b3008 	ldr	r3, [fp, #-8]
+   11700:	e1520003 	cmp	r2, r3
+   11704:	8affffec 	bhi	116bc <find_maximum+0x40>
   if(max<=*(arr+i))max=*(arr+i);
  }
 
 return max;
-   11758:	e55b3009 	ldrb	r3, [fp, #-9]
+   11708:	e55b3009 	ldrb	r3, [fp, #-9]
 }
-   1175c:	e1a00003 	mov	r0, r3
-   11760:	e24bd000 	sub	sp, fp, #0
-   11764:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
-   11768:	e12fff1e 	bx	lr
+   1170c:	e1a00003 	mov	r0, r3
+   11710:	e24bd000 	sub	sp, fp, #0
+   11714:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
+   11718:	e12fff1e 	bx	lr
 
-0001176c <find_minimum>:
+0001171c <find_minimum>:
 
 int find_minimum (unsigned char *arr, char size){
-   1176c:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
-   11770:	e28db000 	add	fp, sp, #0
-   11774:	e24dd014 	sub	sp, sp, #20
-   11778:	e50b0010 	str	r0, [fp, #-16]
-   1177c:	e1a03001 	mov	r3, r1
-   11780:	e54b3011 	strb	r3, [fp, #-17]	; 0xffffffef
+   1171c:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
+   11720:	e28db000 	add	fp, sp, #0
+   11724:	e24dd014 	sub	sp, sp, #20
+   11728:	e50b0010 	str	r0, [fp, #-16]
+   1172c:	e1a03001 	mov	r3, r1
+   11730:	e54b3011 	strb	r3, [fp, #-17]	; 0xffffffef
 unsigned int i=0U;
-   11784:	e3a03000 	mov	r3, #0
-   11788:	e50b3008 	str	r3, [fp, #-8]
+   11734:	e3a03000 	mov	r3, #0
+   11738:	e50b3008 	str	r3, [fp, #-8]
 unsigned char min=0U;
-   1178c:	e3a03000 	mov	r3, #0
-   11790:	e54b3009 	strb	r3, [fp, #-9]
+   1173c:	e3a03000 	mov	r3, #0
+   11740:	e54b3009 	strb	r3, [fp, #-9]
 min=*arr;
-   11794:	e51b3010 	ldr	r3, [fp, #-16]
-   11798:	e5d33000 	ldrb	r3, [r3]
-   1179c:	e54b3009 	strb	r3, [fp, #-9]
+   11744:	e51b3010 	ldr	r3, [fp, #-16]
+   11748:	e5d33000 	ldrb	r3, [r3]
+   1174c:	e54b3009 	strb	r3, [fp, #-9]
  for(i=0;i<size;i++){
-   117a0:	e3a03000 	mov	r3, #0
-   117a4:	e50b3008 	str	r3, [fp, #-8]
-   117a8:	ea00000e 	b	117e8 <find_minimum+0x7c>
+   11750:	e3a03000 	mov	r3, #0
+   11754:	e50b3008 	str	r3, [fp, #-8]
+   11758:	ea00000e 	b	11798 <find_minimum+0x7c>
   if(min>=*(arr+i))min=*(arr+i);
-   117ac:	e51b2010 	ldr	r2, [fp, #-16]
-   117b0:	e51b3008 	ldr	r3, [fp, #-8]
-   117b4:	e0823003 	add	r3, r2, r3
-   117b8:	e5d33000 	ldrb	r3, [r3]
-   117bc:	e55b2009 	ldrb	r2, [fp, #-9]
-   117c0:	e1520003 	cmp	r2, r3
-   117c4:	3a000004 	bcc	117dc <find_minimum+0x70>
-   117c8:	e51b2010 	ldr	r2, [fp, #-16]
-   117cc:	e51b3008 	ldr	r3, [fp, #-8]
-   117d0:	e0823003 	add	r3, r2, r3
-   117d4:	e5d33000 	ldrb	r3, [r3]
-   117d8:	e54b3009 	strb	r3, [fp, #-9]
+   1175c:	e51b2010 	ldr	r2, [fp, #-16]
+   11760:	e51b3008 	ldr	r3, [fp, #-8]
+   11764:	e0823003 	add	r3, r2, r3
+   11768:	e5d33000 	ldrb	r3, [r3]
+   1176c:	e55b2009 	ldrb	r2, [fp, #-9]
+   11770:	e1520003 	cmp	r2, r3
+   11774:	3a000004 	bcc	1178c <find_minimum+0x70>
+   11778:	e51b2010 	ldr	r2, [fp, #-16]
+   1177c:	e51b3008 	ldr	r3, [fp, #-8]
+   11780:	e0823003 	add	r3, r2, r3
+   11784:	e5d33000 	ldrb	r3, [r3]
+   11788:	e54b3009 	strb	r3, [fp, #-9]
 
 int find_minimum (unsigned char *arr, char size){
 unsigned int i=0U;
 unsigned char min=0U;
 min=*arr;
  for(i=0;i<size;i++){
-   117dc:	e51b3008 	ldr	r3, [fp, #-8]
-   117e0:	e2833001 	add	r3, r3, #1
-   117e4:	e50b3008 	str	r3, [fp, #-8]
-   117e8:	e55b2011 	ldrb	r2, [fp, #-17]	; 0xffffffef
-   117ec:	e51b3008 	ldr	r3, [fp, #-8]
-   117f0:	e1520003 	cmp	r2, r3
-   117f4:	8affffec 	bhi	117ac <find_minimum+0x40>
+   1178c:	e51b3008 	ldr	r3, [fp, #-8]
+   11790:	e2833001 	add	r3, r3, #1
+   11794:	e50b3008 	str	r3, [fp, #-8]
+   11798:	e55b2011 	ldrb	r2, [fp, #-17]	; 0xffffffef
+   1179c:	e51b3008 	ldr	r3, [fp, #-8]
+   117a0:	e1520003 	cmp	r2, r3
+   117a4:	8affffec 	bhi	1175c <find_minimum+0x40>
   if(min>=*(arr+i))min=*(arr+i);
  }
 
 return min;
-   117f8:	e55b3009 	ldrb	r3, [fp, #-9]
+   117a8:	e55b3009 	ldrb	r3, [fp, #-9]
 }
-   117fc:	e1a00003 	mov	r0, r3
-   11800:	e24bd000 	sub	sp, fp, #0
-   11804:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
-   11808:	e12fff1e 	bx	lr
+   117ac:	e1a00003 	mov	r0, r3
+   117b0:	e24bd000 	sub	sp, fp, #0
+   117b4:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
+   117b8:	e12fff1e 	bx	lr
 
-0001180c <sort_array>:
+000117bc <sort_array>:
 
 void sort_array(unsigned char *arr,char size){
-   1180c:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
-   11810:	e28db000 	add	fp, sp, #0
-   11814:	e24dd014 	sub	sp, sp, #20
-   11818:	e50b0010 	str	r0, [fp, #-16]
-   1181c:	e1a03001 	mov	r3, r1
-   11820:	e54b3011 	strb	r3, [fp, #-17]	; 0xffffffef
+   117bc:	e52db004 	push	{fp}		; (str fp, [sp, #-4]!)
+   117c0:	e28db000 	add	fp, sp, #0
+   117c4:	e24dd014 	sub	sp, sp, #20
+   117c8:	e50b0010 	str	r0, [fp, #-16]
+   117cc:	e1a03001 	mov	r3, r1
+   117d0:	e54b3011 	strb	r3, [fp, #-17]	; 0xffffffef
 unsigned char i=0U,j=0U,buf=0U;
-   11824:	e3a03000 	mov	r3, #0
-   11828:	e54b3005 	strb	r3, [fp, #-5]
-   1182c:	e3a03000 	mov	r3, #0
-   11830:	e54b3006 	strb	r3, [fp, #-6]
-   11834:	e3a03000 	mov	r3, #0
-   11838:	e54b3007 	strb	r3, [fp, #-7]
+   117d4:	e3a03000 	mov	r3, #0
+   117d8:	e54b3005 	strb	r3, [fp, #-5]
+   117dc:	e3a03000 	mov	r3, #0
+   117e0:	e54b3006 	strb	r3, [fp, #-6]
+   117e4:	e3a03000 	mov	r3, #0
+   117e8:	e54b3007 	strb	r3, [fp, #-7]
  for(i=0;i<size;i++)
-   1183c:	e3a03000 	mov	r3, #0
-   11840:	e54b3005 	strb	r3, [fp, #-5]
-   11844:	ea00002b 	b	118f8 <sort_array+0xec>
+   117ec:	e3a03000 	mov	r3, #0
+   117f0:	e54b3005 	strb	r3, [fp, #-5]
+   117f4:	ea00002b 	b	118a8 <sort_array+0xec>
 	for(j=1;j<size;j++)
-   11848:	e3a03001 	mov	r3, #1
-   1184c:	e54b3006 	strb	r3, [fp, #-6]
-   11850:	ea000021 	b	118dc <sort_array+0xd0>
+   117f8:	e3a03001 	mov	r3, #1
+   117fc:	e54b3006 	strb	r3, [fp, #-6]
+   11800:	ea000021 	b	1188c <sort_array+0xd0>
 		if(*(arr+j-1)<*(arr+j)){
-   11854:	e55b3006 	ldrb	r3, [fp, #-6]
-   11858:	e2433001 	sub	r3, r3, #1
-   1185c:	e51b2010 	ldr	r2, [fp, #-16]
-   11860:	e0823003 	add	r3, r2, r3
-   11864:	e5d32000 	ldrb	r2, [r3]
-   11868:	e55b3006 	ldrb	r3, [fp, #-6]
-   1186c:	e51b1010 	ldr	r1, [fp, #-16]
-   11870:	e0813003 	add	r3, r1, r3
-   11874:	e5d33000 	ldrb	r3, [r3]
-   11878:	e1520003 	cmp	r2, r3
-   1187c:	2a000013 	bcs	118d0 <sort_array+0xc4>
+   11804:	e55b3006 	ldrb	r3, [fp, #-6]
+   11808:	e2433001 	sub	r3, r3, #1
+   1180c:	e51b2010 	ldr	r2, [fp, #-16]
+   11810:	e0823003 	add	r3, r2, r3
+   11814:	e5d32000 	ldrb	r2, [r3]
+   11818:	e55b3006 	ldrb	r3, [fp, #-6]
+   1181c:	e51b1010 	ldr	r1, [fp, #-16]
+   11820:	e0813003 	add	r3, r1, r3
+   11824:	e5d33000 	ldrb	r3, [r3]
+   11828:	e1520003 	cmp	r2, r3
+   1182c:	2a000013 	bcs	11880 <sort_array+0xc4>
 		buf=*(arr+j);
-   11880:	e55b3006 	ldrb	r3, [fp, #-6]
-   11884:	e51b2010 	ldr	r2, [fp, #-16]
-   11888:	e0823003 	add	r3, r2, r3
-   1188c:	e5d33000 	ldrb	r3, [r3]
-   11890:	e54b3007 	strb	r3, [fp, #-7]
+   11830:	e55b3006 	ldrb	r3, [fp, #-6]
+   11834:	e51b2010 	ldr	r2, [fp, #-16]
+   11838:	e0823003 	add	r3, r2, r3
+   1183c:	e5d33000 	ldrb	r3, [r3]
+   11840:	e54b3007 	strb	r3, [fp, #-7]
 		*(arr+j)=*(arr+j-1);
-   11894:	e55b3006 	ldrb	r3, [fp, #-6]
-   11898:	e51b2010 	ldr	r2, [fp, #-16]
-   1189c:	e0823003 	add	r3, r2, r3
-   118a0:	e55b2006 	ldrb	r2, [fp, #-6]
-   118a4:	e2422001 	sub	r2, r2, #1
-   118a8:	e51b1010 	ldr	r1, [fp, #-16]
-   118ac:	e0812002 	add	r2, r1, r2
-   118b0:	e5d22000 	ldrb	r2, [r2]
-   118b4:	e5c32000 	strb	r2, [r3]
+   11844:	e55b3006 	ldrb	r3, [fp, #-6]
+   11848:	e51b2010 	ldr	r2, [fp, #-16]
+   1184c:	e0823003 	add	r3, r2, r3
+   11850:	e55b2006 	ldrb	r2, [fp, #-6]
+   11854:	e2422001 	sub	r2, r2, #1
+   11858:	e51b1010 	ldr	r1, [fp, #-16]
+   1185c:	e0812002 	add	r2, r1, r2
+   11860:	e5d22000 	ldrb	r2, [r2]
+   11864:	e5c32000 	strb	r2, [r3]
 		*(arr+j-1)=buf;
-   118b8:	e55b3006 	ldrb	r3, [fp, #-6]
-   118bc:	e2433001 	sub	r3, r3, #1
-   118c0:	e51b2010 	ldr	r2, [fp, #-16]
-   118c4:	e0823003 	add	r3, r2, r3
-   118c8:	e55b2007 	ldrb	r2, [fp, #-7]
-   118cc:	e5c32000 	strb	r2, [r3]
+   11868:	e55b3006 	ldrb	r3, [fp, #-6]
+   1186c:	e2433001 	sub	r3, r3, #1
+   11870:	e51b2010 	ldr	r2, [fp, #-16]
+   11874:	e0823003 	add	r3, r2, r3
+   11878:	e55b2007 	ldrb	r2, [fp, #-7]
+   1187c:	e5c32000 	strb	r2, [r3]
 }
 
 void sort_array(unsigned char *arr,char size){
 unsigned char i=0U,j=0U,buf=0U;
  for(i=0;i<size;i++)
 	for(j=1;j<size;j++)
-   118d0:	e55b3006 	ldrb	r3, [fp, #-6]
-   118d4:	e2833001 	add	r3, r3, #1
-   118d8:	e54b3006 	strb	r3, [fp, #-6]
-   118dc:	e55b2006 	ldrb	r2, [fp, #-6]
-   118e0:	e55b3011 	ldrb	r3, [fp, #-17]	; 0xffffffef
-   118e4:	e1520003 	cmp	r2, r3
-   118e8:	3affffd9 	bcc	11854 <sort_array+0x48>
+   11880:	e55b3006 	ldrb	r3, [fp, #-6]
+   11884:	e2833001 	add	r3, r3, #1
+   11888:	e54b3006 	strb	r3, [fp, #-6]
+   1188c:	e55b2006 	ldrb	r2, [fp, #-6]
+   11890:	e55b3011 	ldrb	r3, [fp, #-17]	; 0xffffffef
+   11894:	e1520003 	cmp	r2, r3
+   11898:	3affffd9 	bcc	11804 <sort_array+0x48>
 return min;
 }
 
 void sort_array(unsigned char *arr,char size){
 unsigned char i=0U,j=0U,buf=0U;
  for(i=0;i<size;i++)
-   118ec:	e55b3005 	ldrb	r3, [fp, #-5]
-   118f0:	e2833001 	add	r3, r3, #1
-   118f4:	e54b3005 	strb	r3, [fp, #-5]
-   118f8:	e55b2005 	ldrb	r2, [fp, #-5]
-   118fc:	e55b3011 	ldrb	r3, [fp, #-17]	; 0xffffffef
-   11900:	e1520003 	cmp	r2, r3
-   11904:	3affffcf 	bcc	11848 <sort_array+0x3c>
+   1189c:	e55b3005 	ldrb	r3, [fp, #-5]
+   118a0:	e2833001 	add	r3, r3, #1
+   118a4:	e54b3005 	strb	r3, [fp, #-5]
+   118a8:	e55b2005 	ldrb	r2, [fp, #-5]
+   118ac:	e55b3011 	ldrb	r3, [fp, #-17]	; 0xffffffef
+   118b0:	e1520003 	cmp	r2, r3
+   118b4:	3affffcf 	bcc	117f8 <sort_array+0x3c>
 		if(*(arr+j-1)<*(arr+j)){
 		buf=*(arr+j);
 		*(arr+j)=*(arr+j-1);
 		*(arr+j-1)=buf;
 		}
 }
-   11908:	e24bd000 	sub	sp, fp, #0
-   1190c:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
-   11910:	e12fff1e 	bx	lr
+   118b8:	e24bd000 	sub	sp, fp, #0
+   118bc:	e49db004 	pop	{fp}		; (ldr fp, [sp], #4)
+   118c0:	e12fff1e 	bx	lr
 
-00011914 <my_itoa>:
+000118c4 <my_itoa>:
 */
 
 #include "data.h"
 
 
 uint8_t my_itoa(int32_t data, uint8_t * ptr, uint32_t base){
-   11914:	e92d4800 	push	{fp, lr}
-   11918:	e28db004 	add	fp, sp, #4
-   1191c:	e24dd018 	sub	sp, sp, #24
-   11920:	e50b0010 	str	r0, [fp, #-16]
-   11924:	e50b1014 	str	r1, [fp, #-20]	; 0xffffffec
-   11928:	e50b2018 	str	r2, [fp, #-24]	; 0xffffffe8
+   118c4:	e92d4800 	push	{fp, lr}
+   118c8:	e28db004 	add	fp, sp, #4
+   118cc:	e24dd018 	sub	sp, sp, #24
+   118d0:	e50b0010 	str	r0, [fp, #-16]
+   118d4:	e50b1014 	str	r1, [fp, #-20]	; 0xffffffec
+   118d8:	e50b2018 	str	r2, [fp, #-24]	; 0xffffffe8
 
 uint8_t length=0U,pos_stop=0U,pos_start=0U,res=0U;
-   1192c:	e3a03000 	mov	r3, #0
-   11930:	e54b3005 	strb	r3, [fp, #-5]
-   11934:	e3a03000 	mov	r3, #0
-   11938:	e54b3006 	strb	r3, [fp, #-6]
-   1193c:	e3a03000 	mov	r3, #0
-   11940:	e54b3007 	strb	r3, [fp, #-7]
-   11944:	e3a03000 	mov	r3, #0
-   11948:	e54b3008 	strb	r3, [fp, #-8]
+   118dc:	e3a03000 	mov	r3, #0
+   118e0:	e54b3005 	strb	r3, [fp, #-5]
+   118e4:	e3a03000 	mov	r3, #0
+   118e8:	e54b3006 	strb	r3, [fp, #-6]
+   118ec:	e3a03000 	mov	r3, #0
+   118f0:	e54b3007 	strb	r3, [fp, #-7]
+   118f4:	e3a03000 	mov	r3, #0
+   118f8:	e54b3008 	strb	r3, [fp, #-8]
 char temp=0;
-   1194c:	e3a03000 	mov	r3, #0
-   11950:	e54b3009 	strb	r3, [fp, #-9]
+   118fc:	e3a03000 	mov	r3, #0
+   11900:	e54b3009 	strb	r3, [fp, #-9]
 
  if(data==0U) *(ptr+(length++))='0';
-   11954:	e51b3010 	ldr	r3, [fp, #-16]
-   11958:	e3530000 	cmp	r3, #0
-   1195c:	1a000008 	bne	11984 <my_itoa+0x70>
-   11960:	e55b3005 	ldrb	r3, [fp, #-5]
-   11964:	e2832001 	add	r2, r3, #1
-   11968:	e54b2005 	strb	r2, [fp, #-5]
-   1196c:	e1a02003 	mov	r2, r3
-   11970:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
-   11974:	e0833002 	add	r3, r3, r2
-   11978:	e3a02030 	mov	r2, #48	; 0x30
-   1197c:	e5c32000 	strb	r2, [r3]
-   11980:	ea0000dc 	b	11cf8 <my_itoa+0x3e4>
+   11904:	e51b3010 	ldr	r3, [fp, #-16]
+   11908:	e3530000 	cmp	r3, #0
+   1190c:	1a000008 	bne	11934 <my_itoa+0x70>
+   11910:	e55b3005 	ldrb	r3, [fp, #-5]
+   11914:	e2832001 	add	r2, r3, #1
+   11918:	e54b2005 	strb	r2, [fp, #-5]
+   1191c:	e1a02003 	mov	r2, r3
+   11920:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
+   11924:	e0833002 	add	r3, r3, r2
+   11928:	e3a02030 	mov	r2, #48	; 0x30
+   1192c:	e5c32000 	strb	r2, [r3]
+   11930:	ea0000dc 	b	11ca8 <my_itoa+0x3e4>
  else if (data>0){
-   11984:	e51b3010 	ldr	r3, [fp, #-16]
-   11988:	e3530000 	cmp	r3, #0
-   1198c:	da000041 	ble	11a98 <my_itoa+0x184>
+   11934:	e51b3010 	ldr	r3, [fp, #-16]
+   11938:	e3530000 	cmp	r3, #0
+   1193c:	da000041 	ble	11a48 <my_itoa+0x184>
 
 	while(data!=0U){
-   11990:	ea00001f 	b	11a14 <my_itoa+0x100>
+   11940:	ea00001f 	b	119c4 <my_itoa+0x100>
 	res=data%base;
-   11994:	e51b3010 	ldr	r3, [fp, #-16]
-   11998:	e1a00003 	mov	r0, r3
-   1199c:	e51b1018 	ldr	r1, [fp, #-24]	; 0xffffffe8
-   119a0:	eb0001ce 	bl	120e0 <__aeabi_uidivmod>
-   119a4:	e1a03001 	mov	r3, r1
-   119a8:	e54b3008 	strb	r3, [fp, #-8]
+   11944:	e51b3010 	ldr	r3, [fp, #-16]
+   11948:	e1a00003 	mov	r0, r3
+   1194c:	e51b1018 	ldr	r1, [fp, #-24]	; 0xffffffe8
+   11950:	eb0001ce 	bl	12090 <__aeabi_uidivmod>
+   11954:	e1a03001 	mov	r3, r1
+   11958:	e54b3008 	strb	r3, [fp, #-8]
 	*(ptr+(length++))=(res>9)?(res-10)+'a' : res+'0';
-   119ac:	e55b3005 	ldrb	r3, [fp, #-5]
-   119b0:	e2832001 	add	r2, r3, #1
-   119b4:	e54b2005 	strb	r2, [fp, #-5]
-   119b8:	e1a02003 	mov	r2, r3
-   119bc:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
-   119c0:	e0832002 	add	r2, r3, r2
-   119c4:	e55b3008 	ldrb	r3, [fp, #-8]
-   119c8:	e3530009 	cmp	r3, #9
-   119cc:	9a000003 	bls	119e0 <my_itoa+0xcc>
-   119d0:	e55b3008 	ldrb	r3, [fp, #-8]
-   119d4:	e2833057 	add	r3, r3, #87	; 0x57
-   119d8:	e6ef3073 	uxtb	r3, r3
-   119dc:	ea000002 	b	119ec <my_itoa+0xd8>
-   119e0:	e55b3008 	ldrb	r3, [fp, #-8]
-   119e4:	e2833030 	add	r3, r3, #48	; 0x30
-   119e8:	e6ef3073 	uxtb	r3, r3
-   119ec:	e5c23000 	strb	r3, [r2]
+   1195c:	e55b3005 	ldrb	r3, [fp, #-5]
+   11960:	e2832001 	add	r2, r3, #1
+   11964:	e54b2005 	strb	r2, [fp, #-5]
+   11968:	e1a02003 	mov	r2, r3
+   1196c:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
+   11970:	e0832002 	add	r2, r3, r2
+   11974:	e55b3008 	ldrb	r3, [fp, #-8]
+   11978:	e3530009 	cmp	r3, #9
+   1197c:	9a000003 	bls	11990 <my_itoa+0xcc>
+   11980:	e55b3008 	ldrb	r3, [fp, #-8]
+   11984:	e2833057 	add	r3, r3, #87	; 0x57
+   11988:	e6ef3073 	uxtb	r3, r3
+   1198c:	ea000002 	b	1199c <my_itoa+0xd8>
+   11990:	e55b3008 	ldrb	r3, [fp, #-8]
+   11994:	e2833030 	add	r3, r3, #48	; 0x30
+   11998:	e6ef3073 	uxtb	r3, r3
+   1199c:	e5c23000 	strb	r3, [r2]
 	data/=base;
-   119f0:	e51b3010 	ldr	r3, [fp, #-16]
-   119f4:	e1a00003 	mov	r0, r3
-   119f8:	e51b1018 	ldr	r1, [fp, #-24]	; 0xffffffe8
-   119fc:	eb00013c 	bl	11ef4 <__aeabi_uidiv>
-   11a00:	e1a03000 	mov	r3, r0
-   11a04:	e50b3010 	str	r3, [fp, #-16]
+   119a0:	e51b3010 	ldr	r3, [fp, #-16]
+   119a4:	e1a00003 	mov	r0, r3
+   119a8:	e51b1018 	ldr	r1, [fp, #-24]	; 0xffffffe8
+   119ac:	eb00013c 	bl	11ea4 <__aeabi_uidiv>
+   119b0:	e1a03000 	mov	r3, r0
+   119b4:	e50b3010 	str	r3, [fp, #-16]
 	pos_stop=length-1;
-   11a08:	e55b3005 	ldrb	r3, [fp, #-5]
-   11a0c:	e2433001 	sub	r3, r3, #1
-   11a10:	e54b3006 	strb	r3, [fp, #-6]
+   119b8:	e55b3005 	ldrb	r3, [fp, #-5]
+   119bc:	e2433001 	sub	r3, r3, #1
+   119c0:	e54b3006 	strb	r3, [fp, #-6]
 char temp=0;
 
  if(data==0U) *(ptr+(length++))='0';
  else if (data>0){
 
 	while(data!=0U){
-   11a14:	e51b3010 	ldr	r3, [fp, #-16]
-   11a18:	e3530000 	cmp	r3, #0
-   11a1c:	1affffdc 	bne	11994 <my_itoa+0x80>
+   119c4:	e51b3010 	ldr	r3, [fp, #-16]
+   119c8:	e3530000 	cmp	r3, #0
+   119cc:	1affffdc 	bne	11944 <my_itoa+0x80>
 	*(ptr+(length++))=(res>9)?(res-10)+'a' : res+'0';
 	data/=base;
 	pos_stop=length-1;
 	}
 
 	while(pos_start<pos_stop){
-   11a20:	ea000017 	b	11a84 <my_itoa+0x170>
+   119d0:	ea000017 	b	11a34 <my_itoa+0x170>
 	temp=*(ptr+pos_start);
-   11a24:	e55b3007 	ldrb	r3, [fp, #-7]
-   11a28:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
-   11a2c:	e0823003 	add	r3, r2, r3
-   11a30:	e5d33000 	ldrb	r3, [r3]
-   11a34:	e54b3009 	strb	r3, [fp, #-9]
+   119d4:	e55b3007 	ldrb	r3, [fp, #-7]
+   119d8:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   119dc:	e0823003 	add	r3, r2, r3
+   119e0:	e5d33000 	ldrb	r3, [r3]
+   119e4:	e54b3009 	strb	r3, [fp, #-9]
 	*(ptr+pos_start)=*(ptr+pos_stop);
-   11a38:	e55b3007 	ldrb	r3, [fp, #-7]
-   11a3c:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
-   11a40:	e0823003 	add	r3, r2, r3
-   11a44:	e55b2006 	ldrb	r2, [fp, #-6]
-   11a48:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
-   11a4c:	e0812002 	add	r2, r1, r2
-   11a50:	e5d22000 	ldrb	r2, [r2]
-   11a54:	e5c32000 	strb	r2, [r3]
+   119e8:	e55b3007 	ldrb	r3, [fp, #-7]
+   119ec:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   119f0:	e0823003 	add	r3, r2, r3
+   119f4:	e55b2006 	ldrb	r2, [fp, #-6]
+   119f8:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
+   119fc:	e0812002 	add	r2, r1, r2
+   11a00:	e5d22000 	ldrb	r2, [r2]
+   11a04:	e5c32000 	strb	r2, [r3]
 	*(ptr+pos_stop)=temp;
-   11a58:	e55b3006 	ldrb	r3, [fp, #-6]
-   11a5c:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
-   11a60:	e0823003 	add	r3, r2, r3
-   11a64:	e55b2009 	ldrb	r2, [fp, #-9]
-   11a68:	e5c32000 	strb	r2, [r3]
+   11a08:	e55b3006 	ldrb	r3, [fp, #-6]
+   11a0c:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   11a10:	e0823003 	add	r3, r2, r3
+   11a14:	e55b2009 	ldrb	r2, [fp, #-9]
+   11a18:	e5c32000 	strb	r2, [r3]
 	pos_start++;
-   11a6c:	e55b3007 	ldrb	r3, [fp, #-7]
-   11a70:	e2833001 	add	r3, r3, #1
-   11a74:	e54b3007 	strb	r3, [fp, #-7]
+   11a1c:	e55b3007 	ldrb	r3, [fp, #-7]
+   11a20:	e2833001 	add	r3, r3, #1
+   11a24:	e54b3007 	strb	r3, [fp, #-7]
 	pos_stop--;
-   11a78:	e55b3006 	ldrb	r3, [fp, #-6]
-   11a7c:	e2433001 	sub	r3, r3, #1
-   11a80:	e54b3006 	strb	r3, [fp, #-6]
+   11a28:	e55b3006 	ldrb	r3, [fp, #-6]
+   11a2c:	e2433001 	sub	r3, r3, #1
+   11a30:	e54b3006 	strb	r3, [fp, #-6]
 	*(ptr+(length++))=(res>9)?(res-10)+'a' : res+'0';
 	data/=base;
 	pos_stop=length-1;
 	}
 
 	while(pos_start<pos_stop){
-   11a84:	e55b2007 	ldrb	r2, [fp, #-7]
-   11a88:	e55b3006 	ldrb	r3, [fp, #-6]
-   11a8c:	e1520003 	cmp	r2, r3
-   11a90:	3affffe3 	bcc	11a24 <my_itoa+0x110>
-   11a94:	ea000097 	b	11cf8 <my_itoa+0x3e4>
+   11a34:	e55b2007 	ldrb	r2, [fp, #-7]
+   11a38:	e55b3006 	ldrb	r3, [fp, #-6]
+   11a3c:	e1520003 	cmp	r2, r3
+   11a40:	3affffe3 	bcc	119d4 <my_itoa+0x110>
+   11a44:	ea000097 	b	11ca8 <my_itoa+0x3e4>
 	pos_start++;
 	pos_stop--;
 	}
 
  }
  else if (data<0 && base!=10){
-   11a98:	e51b3010 	ldr	r3, [fp, #-16]
-   11a9c:	e3530000 	cmp	r3, #0
-   11aa0:	aa000044 	bge	11bb8 <my_itoa+0x2a4>
-   11aa4:	e51b3018 	ldr	r3, [fp, #-24]	; 0xffffffe8
-   11aa8:	e353000a 	cmp	r3, #10
-   11aac:	0a000041 	beq	11bb8 <my_itoa+0x2a4>
+   11a48:	e51b3010 	ldr	r3, [fp, #-16]
+   11a4c:	e3530000 	cmp	r3, #0
+   11a50:	aa000044 	bge	11b68 <my_itoa+0x2a4>
+   11a54:	e51b3018 	ldr	r3, [fp, #-24]	; 0xffffffe8
+   11a58:	e353000a 	cmp	r3, #10
+   11a5c:	0a000041 	beq	11b68 <my_itoa+0x2a4>
 	
 	data=0xffffffff+data+0x00000001;
        while(data!=0U){
-   11ab0:	ea00001f 	b	11b34 <my_itoa+0x220>
+   11a60:	ea00001f 	b	11ae4 <my_itoa+0x220>
         res=data%base;
-   11ab4:	e51b3010 	ldr	r3, [fp, #-16]
-   11ab8:	e1a00003 	mov	r0, r3
-   11abc:	e51b1018 	ldr	r1, [fp, #-24]	; 0xffffffe8
-   11ac0:	eb000186 	bl	120e0 <__aeabi_uidivmod>
-   11ac4:	e1a03001 	mov	r3, r1
-   11ac8:	e54b3008 	strb	r3, [fp, #-8]
+   11a64:	e51b3010 	ldr	r3, [fp, #-16]
+   11a68:	e1a00003 	mov	r0, r3
+   11a6c:	e51b1018 	ldr	r1, [fp, #-24]	; 0xffffffe8
+   11a70:	eb000186 	bl	12090 <__aeabi_uidivmod>
+   11a74:	e1a03001 	mov	r3, r1
+   11a78:	e54b3008 	strb	r3, [fp, #-8]
         *(ptr+(length++))=(res>9)?(res-10)+'a' : res+'0';
-   11acc:	e55b3005 	ldrb	r3, [fp, #-5]
-   11ad0:	e2832001 	add	r2, r3, #1
-   11ad4:	e54b2005 	strb	r2, [fp, #-5]
-   11ad8:	e1a02003 	mov	r2, r3
-   11adc:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
-   11ae0:	e0832002 	add	r2, r3, r2
-   11ae4:	e55b3008 	ldrb	r3, [fp, #-8]
-   11ae8:	e3530009 	cmp	r3, #9
-   11aec:	9a000003 	bls	11b00 <my_itoa+0x1ec>
-   11af0:	e55b3008 	ldrb	r3, [fp, #-8]
-   11af4:	e2833057 	add	r3, r3, #87	; 0x57
-   11af8:	e6ef3073 	uxtb	r3, r3
-   11afc:	ea000002 	b	11b0c <my_itoa+0x1f8>
-   11b00:	e55b3008 	ldrb	r3, [fp, #-8]
-   11b04:	e2833030 	add	r3, r3, #48	; 0x30
-   11b08:	e6ef3073 	uxtb	r3, r3
-   11b0c:	e5c23000 	strb	r3, [r2]
+   11a7c:	e55b3005 	ldrb	r3, [fp, #-5]
+   11a80:	e2832001 	add	r2, r3, #1
+   11a84:	e54b2005 	strb	r2, [fp, #-5]
+   11a88:	e1a02003 	mov	r2, r3
+   11a8c:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
+   11a90:	e0832002 	add	r2, r3, r2
+   11a94:	e55b3008 	ldrb	r3, [fp, #-8]
+   11a98:	e3530009 	cmp	r3, #9
+   11a9c:	9a000003 	bls	11ab0 <my_itoa+0x1ec>
+   11aa0:	e55b3008 	ldrb	r3, [fp, #-8]
+   11aa4:	e2833057 	add	r3, r3, #87	; 0x57
+   11aa8:	e6ef3073 	uxtb	r3, r3
+   11aac:	ea000002 	b	11abc <my_itoa+0x1f8>
+   11ab0:	e55b3008 	ldrb	r3, [fp, #-8]
+   11ab4:	e2833030 	add	r3, r3, #48	; 0x30
+   11ab8:	e6ef3073 	uxtb	r3, r3
+   11abc:	e5c23000 	strb	r3, [r2]
         data/=base;
-   11b10:	e51b3010 	ldr	r3, [fp, #-16]
-   11b14:	e1a00003 	mov	r0, r3
-   11b18:	e51b1018 	ldr	r1, [fp, #-24]	; 0xffffffe8
-   11b1c:	eb0000f4 	bl	11ef4 <__aeabi_uidiv>
-   11b20:	e1a03000 	mov	r3, r0
-   11b24:	e50b3010 	str	r3, [fp, #-16]
+   11ac0:	e51b3010 	ldr	r3, [fp, #-16]
+   11ac4:	e1a00003 	mov	r0, r3
+   11ac8:	e51b1018 	ldr	r1, [fp, #-24]	; 0xffffffe8
+   11acc:	eb0000f4 	bl	11ea4 <__aeabi_uidiv>
+   11ad0:	e1a03000 	mov	r3, r0
+   11ad4:	e50b3010 	str	r3, [fp, #-16]
         pos_stop=length-1;
-   11b28:	e55b3005 	ldrb	r3, [fp, #-5]
-   11b2c:	e2433001 	sub	r3, r3, #1
-   11b30:	e54b3006 	strb	r3, [fp, #-6]
+   11ad8:	e55b3005 	ldrb	r3, [fp, #-5]
+   11adc:	e2433001 	sub	r3, r3, #1
+   11ae0:	e54b3006 	strb	r3, [fp, #-6]
 
  }
  else if (data<0 && base!=10){
 	
 	data=0xffffffff+data+0x00000001;
        while(data!=0U){
-   11b34:	e51b3010 	ldr	r3, [fp, #-16]
-   11b38:	e3530000 	cmp	r3, #0
-   11b3c:	1affffdc 	bne	11ab4 <my_itoa+0x1a0>
+   11ae4:	e51b3010 	ldr	r3, [fp, #-16]
+   11ae8:	e3530000 	cmp	r3, #0
+   11aec:	1affffdc 	bne	11a64 <my_itoa+0x1a0>
         *(ptr+(length++))=(res>9)?(res-10)+'a' : res+'0';
         data/=base;
         pos_stop=length-1;
         }
 
         while(pos_start<pos_stop){
-   11b40:	ea000017 	b	11ba4 <my_itoa+0x290>
+   11af0:	ea000017 	b	11b54 <my_itoa+0x290>
         temp=*(ptr+pos_start);
-   11b44:	e55b3007 	ldrb	r3, [fp, #-7]
-   11b48:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
-   11b4c:	e0823003 	add	r3, r2, r3
-   11b50:	e5d33000 	ldrb	r3, [r3]
-   11b54:	e54b3009 	strb	r3, [fp, #-9]
+   11af4:	e55b3007 	ldrb	r3, [fp, #-7]
+   11af8:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   11afc:	e0823003 	add	r3, r2, r3
+   11b00:	e5d33000 	ldrb	r3, [r3]
+   11b04:	e54b3009 	strb	r3, [fp, #-9]
         *(ptr+pos_start)=*(ptr+pos_stop);
-   11b58:	e55b3007 	ldrb	r3, [fp, #-7]
-   11b5c:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
-   11b60:	e0823003 	add	r3, r2, r3
-   11b64:	e55b2006 	ldrb	r2, [fp, #-6]
-   11b68:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
-   11b6c:	e0812002 	add	r2, r1, r2
-   11b70:	e5d22000 	ldrb	r2, [r2]
-   11b74:	e5c32000 	strb	r2, [r3]
+   11b08:	e55b3007 	ldrb	r3, [fp, #-7]
+   11b0c:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   11b10:	e0823003 	add	r3, r2, r3
+   11b14:	e55b2006 	ldrb	r2, [fp, #-6]
+   11b18:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
+   11b1c:	e0812002 	add	r2, r1, r2
+   11b20:	e5d22000 	ldrb	r2, [r2]
+   11b24:	e5c32000 	strb	r2, [r3]
         *(ptr+pos_stop)=temp;
-   11b78:	e55b3006 	ldrb	r3, [fp, #-6]
-   11b7c:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
-   11b80:	e0823003 	add	r3, r2, r3
-   11b84:	e55b2009 	ldrb	r2, [fp, #-9]
-   11b88:	e5c32000 	strb	r2, [r3]
+   11b28:	e55b3006 	ldrb	r3, [fp, #-6]
+   11b2c:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   11b30:	e0823003 	add	r3, r2, r3
+   11b34:	e55b2009 	ldrb	r2, [fp, #-9]
+   11b38:	e5c32000 	strb	r2, [r3]
         pos_start++;
-   11b8c:	e55b3007 	ldrb	r3, [fp, #-7]
-   11b90:	e2833001 	add	r3, r3, #1
-   11b94:	e54b3007 	strb	r3, [fp, #-7]
+   11b3c:	e55b3007 	ldrb	r3, [fp, #-7]
+   11b40:	e2833001 	add	r3, r3, #1
+   11b44:	e54b3007 	strb	r3, [fp, #-7]
         pos_stop--;
-   11b98:	e55b3006 	ldrb	r3, [fp, #-6]
-   11b9c:	e2433001 	sub	r3, r3, #1
-   11ba0:	e54b3006 	strb	r3, [fp, #-6]
+   11b48:	e55b3006 	ldrb	r3, [fp, #-6]
+   11b4c:	e2433001 	sub	r3, r3, #1
+   11b50:	e54b3006 	strb	r3, [fp, #-6]
         *(ptr+(length++))=(res>9)?(res-10)+'a' : res+'0';
         data/=base;
         pos_stop=length-1;
         }
 
         while(pos_start<pos_stop){
-   11ba4:	e55b2007 	ldrb	r2, [fp, #-7]
-   11ba8:	e55b3006 	ldrb	r3, [fp, #-6]
-   11bac:	e1520003 	cmp	r2, r3
-   11bb0:	3affffe3 	bcc	11b44 <my_itoa+0x230>
+   11b54:	e55b2007 	ldrb	r2, [fp, #-7]
+   11b58:	e55b3006 	ldrb	r3, [fp, #-6]
+   11b5c:	e1520003 	cmp	r2, r3
+   11b60:	3affffe3 	bcc	11af4 <my_itoa+0x230>
 	pos_start++;
 	pos_stop--;
 	}
 
  }
  else if (data<0 && base!=10){
-   11bb4:	ea00004f 	b	11cf8 <my_itoa+0x3e4>
+   11b64:	ea00004f 	b	11ca8 <my_itoa+0x3e4>
         pos_stop--;
         }
 
  }
  else{
 	data=-data;
-   11bb8:	e51b3010 	ldr	r3, [fp, #-16]
-   11bbc:	e2633000 	rsb	r3, r3, #0
-   11bc0:	e50b3010 	str	r3, [fp, #-16]
+   11b68:	e51b3010 	ldr	r3, [fp, #-16]
+   11b6c:	e2633000 	rsb	r3, r3, #0
+   11b70:	e50b3010 	str	r3, [fp, #-16]
 	*(ptr+(length++))='-';
-   11bc4:	e55b3005 	ldrb	r3, [fp, #-5]
-   11bc8:	e2832001 	add	r2, r3, #1
-   11bcc:	e54b2005 	strb	r2, [fp, #-5]
-   11bd0:	e1a02003 	mov	r2, r3
-   11bd4:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
-   11bd8:	e0833002 	add	r3, r3, r2
-   11bdc:	e3a0202d 	mov	r2, #45	; 0x2d
-   11be0:	e5c32000 	strb	r2, [r3]
+   11b74:	e55b3005 	ldrb	r3, [fp, #-5]
+   11b78:	e2832001 	add	r2, r3, #1
+   11b7c:	e54b2005 	strb	r2, [fp, #-5]
+   11b80:	e1a02003 	mov	r2, r3
+   11b84:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
+   11b88:	e0833002 	add	r3, r3, r2
+   11b8c:	e3a0202d 	mov	r2, #45	; 0x2d
+   11b90:	e5c32000 	strb	r2, [r3]
 	pos_start++;
-   11be4:	e55b3007 	ldrb	r3, [fp, #-7]
-   11be8:	e2833001 	add	r3, r3, #1
-   11bec:	e54b3007 	strb	r3, [fp, #-7]
+   11b94:	e55b3007 	ldrb	r3, [fp, #-7]
+   11b98:	e2833001 	add	r3, r3, #1
+   11b9c:	e54b3007 	strb	r3, [fp, #-7]
    	while(data!=0U){
-   11bf0:	ea000020 	b	11c78 <my_itoa+0x364>
+   11ba0:	ea000020 	b	11c28 <my_itoa+0x364>
         res=data%10;
-   11bf4:	e51b2010 	ldr	r2, [fp, #-16]
-   11bf8:	e59f311c 	ldr	r3, [pc, #284]	; 11d1c <my_itoa+0x408>
-   11bfc:	e0c31293 	smull	r1, r3, r3, r2
-   11c00:	e1a01143 	asr	r1, r3, #2
-   11c04:	e1a03fc2 	asr	r3, r2, #31
-   11c08:	e0631001 	rsb	r1, r3, r1
-   11c0c:	e1a03001 	mov	r3, r1
-   11c10:	e1a03103 	lsl	r3, r3, #2
-   11c14:	e0833001 	add	r3, r3, r1
-   11c18:	e1a03083 	lsl	r3, r3, #1
-   11c1c:	e0631002 	rsb	r1, r3, r2
-   11c20:	e1a03001 	mov	r3, r1
-   11c24:	e54b3008 	strb	r3, [fp, #-8]
+   11ba4:	e51b2010 	ldr	r2, [fp, #-16]
+   11ba8:	e59f311c 	ldr	r3, [pc, #284]	; 11ccc <my_itoa+0x408>
+   11bac:	e0c31293 	smull	r1, r3, r3, r2
+   11bb0:	e1a01143 	asr	r1, r3, #2
+   11bb4:	e1a03fc2 	asr	r3, r2, #31
+   11bb8:	e0631001 	rsb	r1, r3, r1
+   11bbc:	e1a03001 	mov	r3, r1
+   11bc0:	e1a03103 	lsl	r3, r3, #2
+   11bc4:	e0833001 	add	r3, r3, r1
+   11bc8:	e1a03083 	lsl	r3, r3, #1
+   11bcc:	e0631002 	rsb	r1, r3, r2
+   11bd0:	e1a03001 	mov	r3, r1
+   11bd4:	e54b3008 	strb	r3, [fp, #-8]
         *(ptr+(length++))=( res+'0');
-   11c28:	e55b3005 	ldrb	r3, [fp, #-5]
-   11c2c:	e2832001 	add	r2, r3, #1
-   11c30:	e54b2005 	strb	r2, [fp, #-5]
-   11c34:	e1a02003 	mov	r2, r3
-   11c38:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
-   11c3c:	e0833002 	add	r3, r3, r2
-   11c40:	e55b2008 	ldrb	r2, [fp, #-8]
-   11c44:	e2822030 	add	r2, r2, #48	; 0x30
-   11c48:	e6ef2072 	uxtb	r2, r2
-   11c4c:	e5c32000 	strb	r2, [r3]
+   11bd8:	e55b3005 	ldrb	r3, [fp, #-5]
+   11bdc:	e2832001 	add	r2, r3, #1
+   11be0:	e54b2005 	strb	r2, [fp, #-5]
+   11be4:	e1a02003 	mov	r2, r3
+   11be8:	e51b3014 	ldr	r3, [fp, #-20]	; 0xffffffec
+   11bec:	e0833002 	add	r3, r3, r2
+   11bf0:	e55b2008 	ldrb	r2, [fp, #-8]
+   11bf4:	e2822030 	add	r2, r2, #48	; 0x30
+   11bf8:	e6ef2072 	uxtb	r2, r2
+   11bfc:	e5c32000 	strb	r2, [r3]
         data/=10;
-   11c50:	e51b3010 	ldr	r3, [fp, #-16]
-   11c54:	e59f20c0 	ldr	r2, [pc, #192]	; 11d1c <my_itoa+0x408>
-   11c58:	e0c21392 	smull	r1, r2, r2, r3
-   11c5c:	e1a02142 	asr	r2, r2, #2
-   11c60:	e1a03fc3 	asr	r3, r3, #31
-   11c64:	e0633002 	rsb	r3, r3, r2
-   11c68:	e50b3010 	str	r3, [fp, #-16]
+   11c00:	e51b3010 	ldr	r3, [fp, #-16]
+   11c04:	e59f20c0 	ldr	r2, [pc, #192]	; 11ccc <my_itoa+0x408>
+   11c08:	e0c21392 	smull	r1, r2, r2, r3
+   11c0c:	e1a02142 	asr	r2, r2, #2
+   11c10:	e1a03fc3 	asr	r3, r3, #31
+   11c14:	e0633002 	rsb	r3, r3, r2
+   11c18:	e50b3010 	str	r3, [fp, #-16]
         pos_stop=length-1;
-   11c6c:	e55b3005 	ldrb	r3, [fp, #-5]
-   11c70:	e2433001 	sub	r3, r3, #1
-   11c74:	e54b3006 	strb	r3, [fp, #-6]
+   11c1c:	e55b3005 	ldrb	r3, [fp, #-5]
+   11c20:	e2433001 	sub	r3, r3, #1
+   11c24:	e54b3006 	strb	r3, [fp, #-6]
  }
  else{
 	data=-data;
 	*(ptr+(length++))='-';
 	pos_start++;
    	while(data!=0U){
-   11c78:	e51b3010 	ldr	r3, [fp, #-16]
-   11c7c:	e3530000 	cmp	r3, #0
-   11c80:	1affffdb 	bne	11bf4 <my_itoa+0x2e0>
+   11c28:	e51b3010 	ldr	r3, [fp, #-16]
+   11c2c:	e3530000 	cmp	r3, #0
+   11c30:	1affffdb 	bne	11ba4 <my_itoa+0x2e0>
         *(ptr+(length++))=( res+'0');
         data/=10;
         pos_stop=length-1;
         }
 
         while(pos_start<pos_stop){
-   11c84:	ea000017 	b	11ce8 <my_itoa+0x3d4>
+   11c34:	ea000017 	b	11c98 <my_itoa+0x3d4>
         temp=*(ptr+pos_start);
-   11c88:	e55b3007 	ldrb	r3, [fp, #-7]
-   11c8c:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
-   11c90:	e0823003 	add	r3, r2, r3
-   11c94:	e5d33000 	ldrb	r3, [r3]
-   11c98:	e54b3009 	strb	r3, [fp, #-9]
+   11c38:	e55b3007 	ldrb	r3, [fp, #-7]
+   11c3c:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   11c40:	e0823003 	add	r3, r2, r3
+   11c44:	e5d33000 	ldrb	r3, [r3]
+   11c48:	e54b3009 	strb	r3, [fp, #-9]
         *(ptr+pos_start)=*(ptr+pos_stop);
-   11c9c:	e55b3007 	ldrb	r3, [fp, #-7]
-   11ca0:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
-   11ca4:	e0823003 	add	r3, r2, r3
-   11ca8:	e55b2006 	ldrb	r2, [fp, #-6]
-   11cac:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
-   11cb0:	e0812002 	add	r2, r1, r2
-   11cb4:	e5d22000 	ldrb	r2, [r2]
-   11cb8:	e5c32000 	strb	r2, [r3]
+   11c4c:	e55b3007 	ldrb	r3, [fp, #-7]
+   11c50:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   11c54:	e0823003 	add	r3, r2, r3
+   11c58:	e55b2006 	ldrb	r2, [fp, #-6]
+   11c5c:	e51b1014 	ldr	r1, [fp, #-20]	; 0xffffffec
+   11c60:	e0812002 	add	r2, r1, r2
+   11c64:	e5d22000 	ldrb	r2, [r2]
+   11c68:	e5c32000 	strb	r2, [r3]
         *(ptr+pos_stop)=temp;
-   11cbc:	e55b3006 	ldrb	r3, [fp, #-6]
-   11cc0:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
-   11cc4:	e0823003 	add	r3, r2, r3
-   11cc8:	e55b2009 	ldrb	r2, [fp, #-9]
-   11ccc:	e5c32000 	strb	r2, [r3]
+   11c6c:	e55b3006 	ldrb	r3, [fp, #-6]
+   11c70:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   11c74:	e0823003 	add	r3, r2, r3
+   11c78:	e55b2009 	ldrb	r2, [fp, #-9]
+   11c7c:	e5c32000 	strb	r2, [r3]
         pos_start++;
-   11cd0:	e55b3007 	ldrb	r3, [fp, #-7]
-   11cd4:	e2833001 	add	r3, r3, #1
-   11cd8:	e54b3007 	strb	r3, [fp, #-7]
+   11c80:	e55b3007 	ldrb	r3, [fp, #-7]
+   11c84:	e2833001 	add	r3, r3, #1
+   11c88:	e54b3007 	strb	r3, [fp, #-7]
         pos_stop--;
-   11cdc:	e55b3006 	ldrb	r3, [fp, #-6]
-   11ce0:	e2433001 	sub	r3, r3, #1
-   11ce4:	e54b3006 	strb	r3, [fp, #-6]
+   11c8c:	e55b3006 	ldrb	r3, [fp, #-6]
+   11c90:	e2433001 	sub	r3, r3, #1
+   11c94:	e54b3006 	strb	r3, [fp, #-6]
         *(ptr+(length++))=( res+'0');
         data/=10;
         pos_stop=length-1;
         }
 
         while(pos_start<pos_stop){
-   11ce8:	e55b2007 	ldrb	r2, [fp, #-7]
-   11cec:	e55b3006 	ldrb	r3, [fp, #-6]
-   11cf0:	e1520003 	cmp	r2, r3
-   11cf4:	3affffe3 	bcc	11c88 <my_itoa+0x374>
+   11c98:	e55b2007 	ldrb	r2, [fp, #-7]
+   11c9c:	e55b3006 	ldrb	r3, [fp, #-6]
+   11ca0:	e1520003 	cmp	r2, r3
+   11ca4:	3affffe3 	bcc	11c38 <my_itoa+0x374>
         }
 
  }
 
 
  	*(ptr+length)='\0';
-   11cf8:	e55b3005 	ldrb	r3, [fp, #-5]
-   11cfc:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
-   11d00:	e0823003 	add	r3, r2, r3
-   11d04:	e3a02000 	mov	r2, #0
-   11d08:	e5c32000 	strb	r2, [r3]
+   11ca8:	e55b3005 	ldrb	r3, [fp, #-5]
+   11cac:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   11cb0:	e0823003 	add	r3, r2, r3
+   11cb4:	e3a02000 	mov	r2, #0
+   11cb8:	e5c32000 	strb	r2, [r3]
 
 	return length;
-   11d0c:	e55b3005 	ldrb	r3, [fp, #-5]
+   11cbc:	e55b3005 	ldrb	r3, [fp, #-5]
 }
-   11d10:	e1a00003 	mov	r0, r3
-   11d14:	e24bd004 	sub	sp, fp, #4
-   11d18:	e8bd8800 	pop	{fp, pc}
-   11d1c:	66666667 	.word	0x66666667
+   11cc0:	e1a00003 	mov	r0, r3
+   11cc4:	e24bd004 	sub	sp, fp, #4
+   11cc8:	e8bd8800 	pop	{fp, pc}
+   11ccc:	66666667 	.word	0x66666667
 
-00011d20 <my_atoi>:
+00011cd0 <my_atoi>:
 
 int32_t my_atoi(uint8_t * ptr, uint8_t digits, uint32_t base){
-   11d20:	e92d4800 	push	{fp, lr}
-   11d24:	e28db004 	add	fp, sp, #4
-   11d28:	e24dd020 	sub	sp, sp, #32
-   11d2c:	e50b0018 	str	r0, [fp, #-24]	; 0xffffffe8
-   11d30:	e1a03001 	mov	r3, r1
-   11d34:	e50b2020 	str	r2, [fp, #-32]	; 0xffffffe0
-   11d38:	e54b3019 	strb	r3, [fp, #-25]	; 0xffffffe7
+   11cd0:	e92d4800 	push	{fp, lr}
+   11cd4:	e28db004 	add	fp, sp, #4
+   11cd8:	e24dd020 	sub	sp, sp, #32
+   11cdc:	e50b0018 	str	r0, [fp, #-24]	; 0xffffffe8
+   11ce0:	e1a03001 	mov	r3, r1
+   11ce4:	e50b2020 	str	r2, [fp, #-32]	; 0xffffffe0
+   11ce8:	e54b3019 	strb	r3, [fp, #-25]	; 0xffffffe7
 
 	uint8_t i=0U,negative=0U;
-   11d3c:	e3a03000 	mov	r3, #0
-   11d40:	e54b3005 	strb	r3, [fp, #-5]
-   11d44:	e3a03000 	mov	r3, #0
-   11d48:	e54b3006 	strb	r3, [fp, #-6]
+   11cec:	e3a03000 	mov	r3, #0
+   11cf0:	e54b3005 	strb	r3, [fp, #-5]
+   11cf4:	e3a03000 	mov	r3, #0
+   11cf8:	e54b3006 	strb	r3, [fp, #-6]
 	int32_t val=0,val2=0,val3=0;
-   11d4c:	e3a03000 	mov	r3, #0
-   11d50:	e50b300c 	str	r3, [fp, #-12]
-   11d54:	e3a03000 	mov	r3, #0
-   11d58:	e50b3014 	str	r3, [fp, #-20]	; 0xffffffec
-   11d5c:	e3a03000 	mov	r3, #0
-   11d60:	e50b3010 	str	r3, [fp, #-16]
+   11cfc:	e3a03000 	mov	r3, #0
+   11d00:	e50b300c 	str	r3, [fp, #-12]
+   11d04:	e3a03000 	mov	r3, #0
+   11d08:	e50b3014 	str	r3, [fp, #-20]	; 0xffffffec
+   11d0c:	e3a03000 	mov	r3, #0
+   11d10:	e50b3010 	str	r3, [fp, #-16]
 
 	if(*(ptr)=='-'){
-   11d64:	e51b3018 	ldr	r3, [fp, #-24]	; 0xffffffe8
-   11d68:	e5d33000 	ldrb	r3, [r3]
-   11d6c:	e353002d 	cmp	r3, #45	; 0x2d
-   11d70:	1a000004 	bne	11d88 <my_atoi+0x68>
+   11d14:	e51b3018 	ldr	r3, [fp, #-24]	; 0xffffffe8
+   11d18:	e5d33000 	ldrb	r3, [r3]
+   11d1c:	e353002d 	cmp	r3, #45	; 0x2d
+   11d20:	1a000004 	bne	11d38 <my_atoi+0x68>
 	negative=1U;
-   11d74:	e3a03001 	mov	r3, #1
-   11d78:	e54b3006 	strb	r3, [fp, #-6]
+   11d24:	e3a03001 	mov	r3, #1
+   11d28:	e54b3006 	strb	r3, [fp, #-6]
 	i++;
-   11d7c:	e55b3005 	ldrb	r3, [fp, #-5]
-   11d80:	e2833001 	add	r3, r3, #1
-   11d84:	e54b3005 	strb	r3, [fp, #-5]
+   11d2c:	e55b3005 	ldrb	r3, [fp, #-5]
+   11d30:	e2833001 	add	r3, r3, #1
+   11d34:	e54b3005 	strb	r3, [fp, #-5]
 	}
 
 
 
  while(*(ptr+i)!='\0'){
-   11d88:	ea000049 	b	11eb4 <my_atoi+0x194>
+   11d38:	ea000049 	b	11e64 <my_atoi+0x194>
 
 	if(*(ptr+i)=='a' || *(ptr+i)=='b' ||*(ptr+i)=='c' ||*(ptr+i)=='d' ||*(ptr+i)=='e' ||*(ptr+i)=='f')
-   11d8c:	e55b3005 	ldrb	r3, [fp, #-5]
-   11d90:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
-   11d94:	e0823003 	add	r3, r2, r3
-   11d98:	e5d33000 	ldrb	r3, [r3]
-   11d9c:	e3530061 	cmp	r3, #97	; 0x61
-   11da0:	0a00001d 	beq	11e1c <my_atoi+0xfc>
-   11da4:	e55b3005 	ldrb	r3, [fp, #-5]
-   11da8:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
-   11dac:	e0823003 	add	r3, r2, r3
-   11db0:	e5d33000 	ldrb	r3, [r3]
-   11db4:	e3530062 	cmp	r3, #98	; 0x62
-   11db8:	0a000017 	beq	11e1c <my_atoi+0xfc>
-   11dbc:	e55b3005 	ldrb	r3, [fp, #-5]
-   11dc0:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
-   11dc4:	e0823003 	add	r3, r2, r3
-   11dc8:	e5d33000 	ldrb	r3, [r3]
-   11dcc:	e3530063 	cmp	r3, #99	; 0x63
-   11dd0:	0a000011 	beq	11e1c <my_atoi+0xfc>
-   11dd4:	e55b3005 	ldrb	r3, [fp, #-5]
-   11dd8:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
-   11ddc:	e0823003 	add	r3, r2, r3
-   11de0:	e5d33000 	ldrb	r3, [r3]
-   11de4:	e3530064 	cmp	r3, #100	; 0x64
-   11de8:	0a00000b 	beq	11e1c <my_atoi+0xfc>
-   11dec:	e55b3005 	ldrb	r3, [fp, #-5]
-   11df0:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
-   11df4:	e0823003 	add	r3, r2, r3
-   11df8:	e5d33000 	ldrb	r3, [r3]
-   11dfc:	e3530065 	cmp	r3, #101	; 0x65
-   11e00:	0a000005 	beq	11e1c <my_atoi+0xfc>
-   11e04:	e55b3005 	ldrb	r3, [fp, #-5]
-   11e08:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
-   11e0c:	e0823003 	add	r3, r2, r3
-   11e10:	e5d33000 	ldrb	r3, [r3]
-   11e14:	e3530066 	cmp	r3, #102	; 0x66
-   11e18:	1a000006 	bne	11e38 <my_atoi+0x118>
+   11d3c:	e55b3005 	ldrb	r3, [fp, #-5]
+   11d40:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
+   11d44:	e0823003 	add	r3, r2, r3
+   11d48:	e5d33000 	ldrb	r3, [r3]
+   11d4c:	e3530061 	cmp	r3, #97	; 0x61
+   11d50:	0a00001d 	beq	11dcc <my_atoi+0xfc>
+   11d54:	e55b3005 	ldrb	r3, [fp, #-5]
+   11d58:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
+   11d5c:	e0823003 	add	r3, r2, r3
+   11d60:	e5d33000 	ldrb	r3, [r3]
+   11d64:	e3530062 	cmp	r3, #98	; 0x62
+   11d68:	0a000017 	beq	11dcc <my_atoi+0xfc>
+   11d6c:	e55b3005 	ldrb	r3, [fp, #-5]
+   11d70:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
+   11d74:	e0823003 	add	r3, r2, r3
+   11d78:	e5d33000 	ldrb	r3, [r3]
+   11d7c:	e3530063 	cmp	r3, #99	; 0x63
+   11d80:	0a000011 	beq	11dcc <my_atoi+0xfc>
+   11d84:	e55b3005 	ldrb	r3, [fp, #-5]
+   11d88:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
+   11d8c:	e0823003 	add	r3, r2, r3
+   11d90:	e5d33000 	ldrb	r3, [r3]
+   11d94:	e3530064 	cmp	r3, #100	; 0x64
+   11d98:	0a00000b 	beq	11dcc <my_atoi+0xfc>
+   11d9c:	e55b3005 	ldrb	r3, [fp, #-5]
+   11da0:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
+   11da4:	e0823003 	add	r3, r2, r3
+   11da8:	e5d33000 	ldrb	r3, [r3]
+   11dac:	e3530065 	cmp	r3, #101	; 0x65
+   11db0:	0a000005 	beq	11dcc <my_atoi+0xfc>
+   11db4:	e55b3005 	ldrb	r3, [fp, #-5]
+   11db8:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
+   11dbc:	e0823003 	add	r3, r2, r3
+   11dc0:	e5d33000 	ldrb	r3, [r3]
+   11dc4:	e3530066 	cmp	r3, #102	; 0x66
+   11dc8:	1a000006 	bne	11de8 <my_atoi+0x118>
 		val= *(ptr+i)-'a'+10;
-   11e1c:	e55b3005 	ldrb	r3, [fp, #-5]
-   11e20:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
-   11e24:	e0823003 	add	r3, r2, r3
-   11e28:	e5d33000 	ldrb	r3, [r3]
-   11e2c:	e2433057 	sub	r3, r3, #87	; 0x57
-   11e30:	e50b300c 	str	r3, [fp, #-12]
-   11e34:	ea000005 	b	11e50 <my_atoi+0x130>
+   11dcc:	e55b3005 	ldrb	r3, [fp, #-5]
+   11dd0:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
+   11dd4:	e0823003 	add	r3, r2, r3
+   11dd8:	e5d33000 	ldrb	r3, [r3]
+   11ddc:	e2433057 	sub	r3, r3, #87	; 0x57
+   11de0:	e50b300c 	str	r3, [fp, #-12]
+   11de4:	ea000005 	b	11e00 <my_atoi+0x130>
 	else val= *(ptr+i)-'0';
-   11e38:	e55b3005 	ldrb	r3, [fp, #-5]
-   11e3c:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
-   11e40:	e0823003 	add	r3, r2, r3
-   11e44:	e5d33000 	ldrb	r3, [r3]
-   11e48:	e2433030 	sub	r3, r3, #48	; 0x30
-   11e4c:	e50b300c 	str	r3, [fp, #-12]
+   11de8:	e55b3005 	ldrb	r3, [fp, #-5]
+   11dec:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
+   11df0:	e0823003 	add	r3, r2, r3
+   11df4:	e5d33000 	ldrb	r3, [r3]
+   11df8:	e2433030 	sub	r3, r3, #48	; 0x30
+   11dfc:	e50b300c 	str	r3, [fp, #-12]
 
 	val2=pow(base,digits-1-i);
-   11e50:	e51b3020 	ldr	r3, [fp, #-32]	; 0xffffffe0
-   11e54:	ee073a90 	vmov	s15, r3
-   11e58:	eeb86b67 	vcvt.f64.u32	d6, s15
-   11e5c:	e55b3019 	ldrb	r3, [fp, #-25]	; 0xffffffe7
-   11e60:	e2432001 	sub	r2, r3, #1
-   11e64:	e55b3005 	ldrb	r3, [fp, #-5]
-   11e68:	e0633002 	rsb	r3, r3, r2
-   11e6c:	ee073a90 	vmov	s15, r3
-   11e70:	eeb87be7 	vcvt.f64.s32	d7, s15
-   11e74:	eeb00b46 	vmov.f64	d0, d6
-   11e78:	eeb01b47 	vmov.f64	d1, d7
-   11e7c:	ebfff971 	bl	10448 <pow@plt>
-   11e80:	eeb07b40 	vmov.f64	d7, d0
-   11e84:	eefd7bc7 	vcvt.s32.f64	s15, d7
-   11e88:	ee173a90 	vmov	r3, s15
-   11e8c:	e50b3014 	str	r3, [fp, #-20]	; 0xffffffec
+   11e00:	e51b3020 	ldr	r3, [fp, #-32]	; 0xffffffe0
+   11e04:	ee073a90 	vmov	s15, r3
+   11e08:	eeb86b67 	vcvt.f64.u32	d6, s15
+   11e0c:	e55b3019 	ldrb	r3, [fp, #-25]	; 0xffffffe7
+   11e10:	e2432001 	sub	r2, r3, #1
+   11e14:	e55b3005 	ldrb	r3, [fp, #-5]
+   11e18:	e0633002 	rsb	r3, r3, r2
+   11e1c:	ee073a90 	vmov	s15, r3
+   11e20:	eeb87be7 	vcvt.f64.s32	d7, s15
+   11e24:	eeb00b46 	vmov.f64	d0, d6
+   11e28:	eeb01b47 	vmov.f64	d1, d7
+   11e2c:	ebfff985 	bl	10448 <pow@plt>
+   11e30:	eeb07b40 	vmov.f64	d7, d0
+   11e34:	eefd7bc7 	vcvt.s32.f64	s15, d7
+   11e38:	ee173a90 	vmov	r3, s15
+   11e3c:	e50b3014 	str	r3, [fp, #-20]	; 0xffffffec
 
 	val3+=val*val2;
-   11e90:	e51b300c 	ldr	r3, [fp, #-12]
-   11e94:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
-   11e98:	e0030392 	mul	r3, r2, r3
-   11e9c:	e51b2010 	ldr	r2, [fp, #-16]
-   11ea0:	e0823003 	add	r3, r2, r3
-   11ea4:	e50b3010 	str	r3, [fp, #-16]
+   11e40:	e51b300c 	ldr	r3, [fp, #-12]
+   11e44:	e51b2014 	ldr	r2, [fp, #-20]	; 0xffffffec
+   11e48:	e0030392 	mul	r3, r2, r3
+   11e4c:	e51b2010 	ldr	r2, [fp, #-16]
+   11e50:	e0823003 	add	r3, r2, r3
+   11e54:	e50b3010 	str	r3, [fp, #-16]
 	i++;
-   11ea8:	e55b3005 	ldrb	r3, [fp, #-5]
-   11eac:	e2833001 	add	r3, r3, #1
-   11eb0:	e54b3005 	strb	r3, [fp, #-5]
+   11e58:	e55b3005 	ldrb	r3, [fp, #-5]
+   11e5c:	e2833001 	add	r3, r3, #1
+   11e60:	e54b3005 	strb	r3, [fp, #-5]
 	i++;
 	}
 
 
 
  while(*(ptr+i)!='\0'){
-   11eb4:	e55b3005 	ldrb	r3, [fp, #-5]
-   11eb8:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
-   11ebc:	e0823003 	add	r3, r2, r3
-   11ec0:	e5d33000 	ldrb	r3, [r3]
-   11ec4:	e3530000 	cmp	r3, #0
-   11ec8:	1affffaf 	bne	11d8c <my_atoi+0x6c>
+   11e64:	e55b3005 	ldrb	r3, [fp, #-5]
+   11e68:	e51b2018 	ldr	r2, [fp, #-24]	; 0xffffffe8
+   11e6c:	e0823003 	add	r3, r2, r3
+   11e70:	e5d33000 	ldrb	r3, [r3]
+   11e74:	e3530000 	cmp	r3, #0
+   11e78:	1affffaf 	bne	11d3c <my_atoi+0x6c>
 	val2=pow(base,digits-1-i);
 
 	val3+=val*val2;
 	i++;
  }
 	if(negative)val3*=-1;
-   11ecc:	e55b3006 	ldrb	r3, [fp, #-6]
-   11ed0:	e3530000 	cmp	r3, #0
-   11ed4:	0a000002 	beq	11ee4 <my_atoi+0x1c4>
-   11ed8:	e51b3010 	ldr	r3, [fp, #-16]
-   11edc:	e2633000 	rsb	r3, r3, #0
-   11ee0:	e50b3010 	str	r3, [fp, #-16]
+   11e7c:	e55b3006 	ldrb	r3, [fp, #-6]
+   11e80:	e3530000 	cmp	r3, #0
+   11e84:	0a000002 	beq	11e94 <my_atoi+0x1c4>
+   11e88:	e51b3010 	ldr	r3, [fp, #-16]
+   11e8c:	e2633000 	rsb	r3, r3, #0
+   11e90:	e50b3010 	str	r3, [fp, #-16]
 	return val3;
-   11ee4:	e51b3010 	ldr	r3, [fp, #-16]
+   11e94:	e51b3010 	ldr	r3, [fp, #-16]
 }
-   11ee8:	e1a00003 	mov	r0, r3
-   11eec:	e24bd004 	sub	sp, fp, #4
-   11ef0:	e8bd8800 	pop	{fp, pc}
+   11e98:	e1a00003 	mov	r0, r3
+   11e9c:	e24bd004 	sub	sp, fp, #4
+   11ea0:	e8bd8800 	pop	{fp, pc}
 
-00011ef4 <__aeabi_uidiv>:
-   11ef4:	e2512001 	subs	r2, r1, #1
-   11ef8:	012fff1e 	bxeq	lr
-   11efc:	3a000074 	bcc	120d4 <__aeabi_uidiv+0x1e0>
-   11f00:	e1500001 	cmp	r0, r1
-   11f04:	9a00006b 	bls	120b8 <__aeabi_uidiv+0x1c4>
-   11f08:	e1110002 	tst	r1, r2
-   11f0c:	0a00006c 	beq	120c4 <__aeabi_uidiv+0x1d0>
-   11f10:	e16f3f10 	clz	r3, r0
-   11f14:	e16f2f11 	clz	r2, r1
-   11f18:	e0423003 	sub	r3, r2, r3
-   11f1c:	e273301f 	rsbs	r3, r3, #31
-   11f20:	10833083 	addne	r3, r3, r3, lsl #1
-   11f24:	e3a02000 	mov	r2, #0
-   11f28:	108ff103 	addne	pc, pc, r3, lsl #2
-   11f2c:	e1a00000 	nop			; (mov r0, r0)
-   11f30:	e1500f81 	cmp	r0, r1, lsl #31
-   11f34:	e0a22002 	adc	r2, r2, r2
-   11f38:	20400f81 	subcs	r0, r0, r1, lsl #31
-   11f3c:	e1500f01 	cmp	r0, r1, lsl #30
-   11f40:	e0a22002 	adc	r2, r2, r2
-   11f44:	20400f01 	subcs	r0, r0, r1, lsl #30
-   11f48:	e1500e81 	cmp	r0, r1, lsl #29
-   11f4c:	e0a22002 	adc	r2, r2, r2
-   11f50:	20400e81 	subcs	r0, r0, r1, lsl #29
-   11f54:	e1500e01 	cmp	r0, r1, lsl #28
-   11f58:	e0a22002 	adc	r2, r2, r2
-   11f5c:	20400e01 	subcs	r0, r0, r1, lsl #28
-   11f60:	e1500d81 	cmp	r0, r1, lsl #27
-   11f64:	e0a22002 	adc	r2, r2, r2
-   11f68:	20400d81 	subcs	r0, r0, r1, lsl #27
-   11f6c:	e1500d01 	cmp	r0, r1, lsl #26
-   11f70:	e0a22002 	adc	r2, r2, r2
-   11f74:	20400d01 	subcs	r0, r0, r1, lsl #26
-   11f78:	e1500c81 	cmp	r0, r1, lsl #25
-   11f7c:	e0a22002 	adc	r2, r2, r2
-   11f80:	20400c81 	subcs	r0, r0, r1, lsl #25
-   11f84:	e1500c01 	cmp	r0, r1, lsl #24
-   11f88:	e0a22002 	adc	r2, r2, r2
-   11f8c:	20400c01 	subcs	r0, r0, r1, lsl #24
-   11f90:	e1500b81 	cmp	r0, r1, lsl #23
-   11f94:	e0a22002 	adc	r2, r2, r2
-   11f98:	20400b81 	subcs	r0, r0, r1, lsl #23
-   11f9c:	e1500b01 	cmp	r0, r1, lsl #22
-   11fa0:	e0a22002 	adc	r2, r2, r2
-   11fa4:	20400b01 	subcs	r0, r0, r1, lsl #22
-   11fa8:	e1500a81 	cmp	r0, r1, lsl #21
-   11fac:	e0a22002 	adc	r2, r2, r2
-   11fb0:	20400a81 	subcs	r0, r0, r1, lsl #21
-   11fb4:	e1500a01 	cmp	r0, r1, lsl #20
-   11fb8:	e0a22002 	adc	r2, r2, r2
-   11fbc:	20400a01 	subcs	r0, r0, r1, lsl #20
-   11fc0:	e1500981 	cmp	r0, r1, lsl #19
-   11fc4:	e0a22002 	adc	r2, r2, r2
-   11fc8:	20400981 	subcs	r0, r0, r1, lsl #19
-   11fcc:	e1500901 	cmp	r0, r1, lsl #18
-   11fd0:	e0a22002 	adc	r2, r2, r2
-   11fd4:	20400901 	subcs	r0, r0, r1, lsl #18
-   11fd8:	e1500881 	cmp	r0, r1, lsl #17
-   11fdc:	e0a22002 	adc	r2, r2, r2
-   11fe0:	20400881 	subcs	r0, r0, r1, lsl #17
-   11fe4:	e1500801 	cmp	r0, r1, lsl #16
-   11fe8:	e0a22002 	adc	r2, r2, r2
-   11fec:	20400801 	subcs	r0, r0, r1, lsl #16
-   11ff0:	e1500781 	cmp	r0, r1, lsl #15
-   11ff4:	e0a22002 	adc	r2, r2, r2
-   11ff8:	20400781 	subcs	r0, r0, r1, lsl #15
-   11ffc:	e1500701 	cmp	r0, r1, lsl #14
-   12000:	e0a22002 	adc	r2, r2, r2
-   12004:	20400701 	subcs	r0, r0, r1, lsl #14
-   12008:	e1500681 	cmp	r0, r1, lsl #13
-   1200c:	e0a22002 	adc	r2, r2, r2
-   12010:	20400681 	subcs	r0, r0, r1, lsl #13
-   12014:	e1500601 	cmp	r0, r1, lsl #12
-   12018:	e0a22002 	adc	r2, r2, r2
-   1201c:	20400601 	subcs	r0, r0, r1, lsl #12
-   12020:	e1500581 	cmp	r0, r1, lsl #11
-   12024:	e0a22002 	adc	r2, r2, r2
-   12028:	20400581 	subcs	r0, r0, r1, lsl #11
-   1202c:	e1500501 	cmp	r0, r1, lsl #10
-   12030:	e0a22002 	adc	r2, r2, r2
-   12034:	20400501 	subcs	r0, r0, r1, lsl #10
-   12038:	e1500481 	cmp	r0, r1, lsl #9
-   1203c:	e0a22002 	adc	r2, r2, r2
-   12040:	20400481 	subcs	r0, r0, r1, lsl #9
-   12044:	e1500401 	cmp	r0, r1, lsl #8
-   12048:	e0a22002 	adc	r2, r2, r2
-   1204c:	20400401 	subcs	r0, r0, r1, lsl #8
-   12050:	e1500381 	cmp	r0, r1, lsl #7
-   12054:	e0a22002 	adc	r2, r2, r2
-   12058:	20400381 	subcs	r0, r0, r1, lsl #7
-   1205c:	e1500301 	cmp	r0, r1, lsl #6
-   12060:	e0a22002 	adc	r2, r2, r2
-   12064:	20400301 	subcs	r0, r0, r1, lsl #6
-   12068:	e1500281 	cmp	r0, r1, lsl #5
-   1206c:	e0a22002 	adc	r2, r2, r2
-   12070:	20400281 	subcs	r0, r0, r1, lsl #5
-   12074:	e1500201 	cmp	r0, r1, lsl #4
-   12078:	e0a22002 	adc	r2, r2, r2
-   1207c:	20400201 	subcs	r0, r0, r1, lsl #4
-   12080:	e1500181 	cmp	r0, r1, lsl #3
-   12084:	e0a22002 	adc	r2, r2, r2
-   12088:	20400181 	subcs	r0, r0, r1, lsl #3
-   1208c:	e1500101 	cmp	r0, r1, lsl #2
-   12090:	e0a22002 	adc	r2, r2, r2
-   12094:	20400101 	subcs	r0, r0, r1, lsl #2
-   12098:	e1500081 	cmp	r0, r1, lsl #1
-   1209c:	e0a22002 	adc	r2, r2, r2
-   120a0:	20400081 	subcs	r0, r0, r1, lsl #1
-   120a4:	e1500001 	cmp	r0, r1
-   120a8:	e0a22002 	adc	r2, r2, r2
-   120ac:	20400001 	subcs	r0, r0, r1
-   120b0:	e1a00002 	mov	r0, r2
-   120b4:	e12fff1e 	bx	lr
-   120b8:	03a00001 	moveq	r0, #1
-   120bc:	13a00000 	movne	r0, #0
-   120c0:	e12fff1e 	bx	lr
-   120c4:	e16f2f11 	clz	r2, r1
-   120c8:	e262201f 	rsb	r2, r2, #31
-   120cc:	e1a00230 	lsr	r0, r0, r2
-   120d0:	e12fff1e 	bx	lr
-   120d4:	e3500000 	cmp	r0, #0
-   120d8:	13e00000 	mvnne	r0, #0
-   120dc:	ea000007 	b	12100 <__aeabi_idiv0>
+00011ea4 <__aeabi_uidiv>:
+   11ea4:	e2512001 	subs	r2, r1, #1
+   11ea8:	012fff1e 	bxeq	lr
+   11eac:	3a000074 	bcc	12084 <__aeabi_uidiv+0x1e0>
+   11eb0:	e1500001 	cmp	r0, r1
+   11eb4:	9a00006b 	bls	12068 <__aeabi_uidiv+0x1c4>
+   11eb8:	e1110002 	tst	r1, r2
+   11ebc:	0a00006c 	beq	12074 <__aeabi_uidiv+0x1d0>
+   11ec0:	e16f3f10 	clz	r3, r0
+   11ec4:	e16f2f11 	clz	r2, r1
+   11ec8:	e0423003 	sub	r3, r2, r3
+   11ecc:	e273301f 	rsbs	r3, r3, #31
+   11ed0:	10833083 	addne	r3, r3, r3, lsl #1
+   11ed4:	e3a02000 	mov	r2, #0
+   11ed8:	108ff103 	addne	pc, pc, r3, lsl #2
+   11edc:	e1a00000 	nop			; (mov r0, r0)
+   11ee0:	e1500f81 	cmp	r0, r1, lsl #31
+   11ee4:	e0a22002 	adc	r2, r2, r2
+   11ee8:	20400f81 	subcs	r0, r0, r1, lsl #31
+   11eec:	e1500f01 	cmp	r0, r1, lsl #30
+   11ef0:	e0a22002 	adc	r2, r2, r2
+   11ef4:	20400f01 	subcs	r0, r0, r1, lsl #30
+   11ef8:	e1500e81 	cmp	r0, r1, lsl #29
+   11efc:	e0a22002 	adc	r2, r2, r2
+   11f00:	20400e81 	subcs	r0, r0, r1, lsl #29
+   11f04:	e1500e01 	cmp	r0, r1, lsl #28
+   11f08:	e0a22002 	adc	r2, r2, r2
+   11f0c:	20400e01 	subcs	r0, r0, r1, lsl #28
+   11f10:	e1500d81 	cmp	r0, r1, lsl #27
+   11f14:	e0a22002 	adc	r2, r2, r2
+   11f18:	20400d81 	subcs	r0, r0, r1, lsl #27
+   11f1c:	e1500d01 	cmp	r0, r1, lsl #26
+   11f20:	e0a22002 	adc	r2, r2, r2
+   11f24:	20400d01 	subcs	r0, r0, r1, lsl #26
+   11f28:	e1500c81 	cmp	r0, r1, lsl #25
+   11f2c:	e0a22002 	adc	r2, r2, r2
+   11f30:	20400c81 	subcs	r0, r0, r1, lsl #25
+   11f34:	e1500c01 	cmp	r0, r1, lsl #24
+   11f38:	e0a22002 	adc	r2, r2, r2
+   11f3c:	20400c01 	subcs	r0, r0, r1, lsl #24
+   11f40:	e1500b81 	cmp	r0, r1, lsl #23
+   11f44:	e0a22002 	adc	r2, r2, r2
+   11f48:	20400b81 	subcs	r0, r0, r1, lsl #23
+   11f4c:	e1500b01 	cmp	r0, r1, lsl #22
+   11f50:	e0a22002 	adc	r2, r2, r2
+   11f54:	20400b01 	subcs	r0, r0, r1, lsl #22
+   11f58:	e1500a81 	cmp	r0, r1, lsl #21
+   11f5c:	e0a22002 	adc	r2, r2, r2
+   11f60:	20400a81 	subcs	r0, r0, r1, lsl #21
+   11f64:	e1500a01 	cmp	r0, r1, lsl #20
+   11f68:	e0a22002 	adc	r2, r2, r2
+   11f6c:	20400a01 	subcs	r0, r0, r1, lsl #20
+   11f70:	e1500981 	cmp	r0, r1, lsl #19
+   11f74:	e0a22002 	adc	r2, r2, r2
+   11f78:	20400981 	subcs	r0, r0, r1, lsl #19
+   11f7c:	e1500901 	cmp	r0, r1, lsl #18
+   11f80:	e0a22002 	adc	r2, r2, r2
+   11f84:	20400901 	subcs	r0, r0, r1, lsl #18
+   11f88:	e1500881 	cmp	r0, r1, lsl #17
+   11f8c:	e0a22002 	adc	r2, r2, r2
+   11f90:	20400881 	subcs	r0, r0, r1, lsl #17
+   11f94:	e1500801 	cmp	r0, r1, lsl #16
+   11f98:	e0a22002 	adc	r2, r2, r2
+   11f9c:	20400801 	subcs	r0, r0, r1, lsl #16
+   11fa0:	e1500781 	cmp	r0, r1, lsl #15
+   11fa4:	e0a22002 	adc	r2, r2, r2
+   11fa8:	20400781 	subcs	r0, r0, r1, lsl #15
+   11fac:	e1500701 	cmp	r0, r1, lsl #14
+   11fb0:	e0a22002 	adc	r2, r2, r2
+   11fb4:	20400701 	subcs	r0, r0, r1, lsl #14
+   11fb8:	e1500681 	cmp	r0, r1, lsl #13
+   11fbc:	e0a22002 	adc	r2, r2, r2
+   11fc0:	20400681 	subcs	r0, r0, r1, lsl #13
+   11fc4:	e1500601 	cmp	r0, r1, lsl #12
+   11fc8:	e0a22002 	adc	r2, r2, r2
+   11fcc:	20400601 	subcs	r0, r0, r1, lsl #12
+   11fd0:	e1500581 	cmp	r0, r1, lsl #11
+   11fd4:	e0a22002 	adc	r2, r2, r2
+   11fd8:	20400581 	subcs	r0, r0, r1, lsl #11
+   11fdc:	e1500501 	cmp	r0, r1, lsl #10
+   11fe0:	e0a22002 	adc	r2, r2, r2
+   11fe4:	20400501 	subcs	r0, r0, r1, lsl #10
+   11fe8:	e1500481 	cmp	r0, r1, lsl #9
+   11fec:	e0a22002 	adc	r2, r2, r2
+   11ff0:	20400481 	subcs	r0, r0, r1, lsl #9
+   11ff4:	e1500401 	cmp	r0, r1, lsl #8
+   11ff8:	e0a22002 	adc	r2, r2, r2
+   11ffc:	20400401 	subcs	r0, r0, r1, lsl #8
+   12000:	e1500381 	cmp	r0, r1, lsl #7
+   12004:	e0a22002 	adc	r2, r2, r2
+   12008:	20400381 	subcs	r0, r0, r1, lsl #7
+   1200c:	e1500301 	cmp	r0, r1, lsl #6
+   12010:	e0a22002 	adc	r2, r2, r2
+   12014:	20400301 	subcs	r0, r0, r1, lsl #6
+   12018:	e1500281 	cmp	r0, r1, lsl #5
+   1201c:	e0a22002 	adc	r2, r2, r2
+   12020:	20400281 	subcs	r0, r0, r1, lsl #5
+   12024:	e1500201 	cmp	r0, r1, lsl #4
+   12028:	e0a22002 	adc	r2, r2, r2
+   1202c:	20400201 	subcs	r0, r0, r1, lsl #4
+   12030:	e1500181 	cmp	r0, r1, lsl #3
+   12034:	e0a22002 	adc	r2, r2, r2
+   12038:	20400181 	subcs	r0, r0, r1, lsl #3
+   1203c:	e1500101 	cmp	r0, r1, lsl #2
+   12040:	e0a22002 	adc	r2, r2, r2
+   12044:	20400101 	subcs	r0, r0, r1, lsl #2
+   12048:	e1500081 	cmp	r0, r1, lsl #1
+   1204c:	e0a22002 	adc	r2, r2, r2
+   12050:	20400081 	subcs	r0, r0, r1, lsl #1
+   12054:	e1500001 	cmp	r0, r1
+   12058:	e0a22002 	adc	r2, r2, r2
+   1205c:	20400001 	subcs	r0, r0, r1
+   12060:	e1a00002 	mov	r0, r2
+   12064:	e12fff1e 	bx	lr
+   12068:	03a00001 	moveq	r0, #1
+   1206c:	13a00000 	movne	r0, #0
+   12070:	e12fff1e 	bx	lr
+   12074:	e16f2f11 	clz	r2, r1
+   12078:	e262201f 	rsb	r2, r2, #31
+   1207c:	e1a00230 	lsr	r0, r0, r2
+   12080:	e12fff1e 	bx	lr
+   12084:	e3500000 	cmp	r0, #0
+   12088:	13e00000 	mvnne	r0, #0
+   1208c:	ea000007 	b	120b0 <__aeabi_idiv0>
 
-000120e0 <__aeabi_uidivmod>:
-   120e0:	e3510000 	cmp	r1, #0
-   120e4:	0afffffa 	beq	120d4 <__aeabi_uidiv+0x1e0>
-   120e8:	e92d4003 	push	{r0, r1, lr}
-   120ec:	ebffff80 	bl	11ef4 <__aeabi_uidiv>
-   120f0:	e8bd4006 	pop	{r1, r2, lr}
-   120f4:	e0030092 	mul	r3, r2, r0
-   120f8:	e0411003 	sub	r1, r1, r3
-   120fc:	e12fff1e 	bx	lr
+00012090 <__aeabi_uidivmod>:
+   12090:	e3510000 	cmp	r1, #0
+   12094:	0afffffa 	beq	12084 <__aeabi_uidiv+0x1e0>
+   12098:	e92d4003 	push	{r0, r1, lr}
+   1209c:	ebffff80 	bl	11ea4 <__aeabi_uidiv>
+   120a0:	e8bd4006 	pop	{r1, r2, lr}
+   120a4:	e0030092 	mul	r3, r2, r0
+   120a8:	e0411003 	sub	r1, r1, r3
+   120ac:	e12fff1e 	bx	lr
 
-00012100 <__aeabi_idiv0>:
-   12100:	e92d4002 	push	{r1, lr}
-   12104:	e3a00008 	mov	r0, #8
-   12108:	ebfff8c5 	bl	10424 <raise@plt>
-   1210c:	e8bd8002 	pop	{r1, pc}
+000120b0 <__aeabi_idiv0>:
+   120b0:	e92d4002 	push	{r1, lr}
+   120b4:	e3a00008 	mov	r0, #8
+   120b8:	ebfff8d9 	bl	10424 <raise@plt>
+   120bc:	e8bd8002 	pop	{r1, pc}
 
-00012110 <__libc_csu_init>:
-   12110:	e92d43f8 	push	{r3, r4, r5, r6, r7, r8, r9, lr}
-   12114:	e1a07000 	mov	r7, r0
-   12118:	e59f604c 	ldr	r6, [pc, #76]	; 1216c <__libc_csu_init+0x5c>
-   1211c:	e59f504c 	ldr	r5, [pc, #76]	; 12170 <__libc_csu_init+0x60>
-   12120:	e08f6006 	add	r6, pc, r6
-   12124:	e08f5005 	add	r5, pc, r5
-   12128:	e0656006 	rsb	r6, r5, r6
-   1212c:	e1a08001 	mov	r8, r1
-   12130:	e1a09002 	mov	r9, r2
-   12134:	ebfff8b2 	bl	10404 <_init>
-   12138:	e1b06146 	asrs	r6, r6, #2
-   1213c:	08bd83f8 	popeq	{r3, r4, r5, r6, r7, r8, r9, pc}
-   12140:	e2455004 	sub	r5, r5, #4
-   12144:	e3a04000 	mov	r4, #0
-   12148:	e2844001 	add	r4, r4, #1
-   1214c:	e5b53004 	ldr	r3, [r5, #4]!
-   12150:	e1a00007 	mov	r0, r7
-   12154:	e1a01008 	mov	r1, r8
-   12158:	e1a02009 	mov	r2, r9
-   1215c:	e12fff33 	blx	r3
-   12160:	e1540006 	cmp	r4, r6
-   12164:	1afffff7 	bne	12148 <__libc_csu_init+0x38>
-   12168:	e8bd83f8 	pop	{r3, r4, r5, r6, r7, r8, r9, pc}
-   1216c:	000102ec 	.word	0x000102ec
-   12170:	000102e4 	.word	0x000102e4
+000120c0 <__libc_csu_init>:
+   120c0:	e92d43f8 	push	{r3, r4, r5, r6, r7, r8, r9, lr}
+   120c4:	e1a07000 	mov	r7, r0
+   120c8:	e59f604c 	ldr	r6, [pc, #76]	; 1211c <__libc_csu_init+0x5c>
+   120cc:	e59f504c 	ldr	r5, [pc, #76]	; 12120 <__libc_csu_init+0x60>
+   120d0:	e08f6006 	add	r6, pc, r6
+   120d4:	e08f5005 	add	r5, pc, r5
+   120d8:	e0656006 	rsb	r6, r5, r6
+   120dc:	e1a08001 	mov	r8, r1
+   120e0:	e1a09002 	mov	r9, r2
+   120e4:	ebfff8c6 	bl	10404 <_init>
+   120e8:	e1b06146 	asrs	r6, r6, #2
+   120ec:	08bd83f8 	popeq	{r3, r4, r5, r6, r7, r8, r9, pc}
+   120f0:	e2455004 	sub	r5, r5, #4
+   120f4:	e3a04000 	mov	r4, #0
+   120f8:	e2844001 	add	r4, r4, #1
+   120fc:	e5b53004 	ldr	r3, [r5, #4]!
+   12100:	e1a00007 	mov	r0, r7
+   12104:	e1a01008 	mov	r1, r8
+   12108:	e1a02009 	mov	r2, r9
+   1210c:	e12fff33 	blx	r3
+   12110:	e1540006 	cmp	r4, r6
+   12114:	1afffff7 	bne	120f8 <__libc_csu_init+0x38>
+   12118:	e8bd83f8 	pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+   1211c:	000102c0 	.word	0x000102c0
+   12120:	000102b8 	.word	0x000102b8
 
-00012174 <__libc_csu_fini>:
-   12174:	e12fff1e 	bx	lr
+00012124 <__libc_csu_fini>:
+   12124:	e12fff1e 	bx	lr
 
 Disassembly of section .fini:
 
-00012178 <_fini>:
-   12178:	e92d4008 	push	{r3, lr}
-   1217c:	e8bd8008 	pop	{r3, pc}
+00012128 <_fini>:
+   12128:	e92d4008 	push	{r3, lr}
+   1212c:	e8bd8008 	pop	{r3, pc}

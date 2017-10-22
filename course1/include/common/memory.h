@@ -94,100 +94,82 @@ void set_all(char * ptr, char value, unsigned int size);
 void clear_all(char * ptr, unsigned int size);
 
 /**
- * @brief Clears elements in a data array
+ * @brief This function moves data from source to destination
  *
- * Given a pointer to a char data set, this will set a clear a number
- * of elements given the size provided. Clear means to set to zero.
  *
- * @param ptr Pointer to data array
- * @param size Number of elements to set to zero
+ * @param src,dst - pointers to data, one is source and one is destination
+ * @param length - length of data to move from src to dst
  *
- * @return void.
+ * @return pointer to destination.
  */
 uint8_t * my_memmove(uint8_t * src, uint8_t * dst, size_t length);
 
 /**
- * @brief 
+ * @brief This function copies data from source to destination 
  *
- * Given a pointer to a char data set, this will set a clear a number
- * of elements given the size provided. Clear means to set to zero.
  *
- * @param ptr Pointer to data array
- * @param size Number of elements to set to zero
+ * @param src,dst - pointers to data, one is source and one is destination
+ * @param length - length of data to copy from src to dst
  *
- * @return void.
+ * @return pointer to destination.
  */
 
 uint8_t * my_memcopy(uint8_t * src, uint8_t * dst, size_t length);
-
 /**
- * @brief Clears elements in a data array
+ * @brief This function sets data in source
  *
- * Given a pointer to a char data set, this will set a clear a number
- * of elements given the size provided. Clear means to set to zero.
  *
- * @param ptr Pointer to data array
- * @param size Number of elements to set to zero
+ * @param src - pointer to source
+ * @param length - length of data to set in src
+ * @param value - value of data to set in source
  *
- * @return void.
+ * @return pointer to source
  */
-
 uint8_t * my_memset(uint8_t * src, size_t length, uint8_t value);
 
 /**
- * @brief Clears elements in a data array
+ * @brief This function sets zero in source
  *
- * Given a pointer to a char data set, this will set a clear a number
- * of elements given the size provided. Clear means to set to zero.
  *
- * @param ptr Pointer to data array
- * @param size Number of elements to set to zero
+ * @param src - pointer to source
+ * @param length - length of data to set in src
+ * 
  *
- * @return void.
+ * @return pointer to source
  */
-
 uint8_t * my_memzero(uint8_t * src, size_t length);
 
 /**
- * @brief Clears elements in a data array
+ * @brief This function reverses the order in source
  *
- * Given a pointer to a char data set, this will set a clear a number
- * of elements given the size provided. Clear means to set to zero.
  *
- * @param ptr Pointer to data array
- * @param size Number of elements to set to zero
+ * @param src - pointer to source
+ * @param length - length of data to reverse in source
  *
- * @return void.
+ *
+ * @return pointer to source
  */
-
 uint8_t * my_reverse(uint8_t * src, size_t length);
 
 /**
- * @brief Clears elements in a data array
+ * @brief This function allocates words in dnamic memory
  *
- * Given a pointer to a char data set, this will set a clear a number
- * of elements given the size provided. Clear means to set to zero.
  *
- * @param ptr Pointer to data array
- * @param size Number of elements to set to zero
+ * @param size Number if words to allocate
  *
- * @return void.
+ * @return ptr - pointer to memory or NULL if operation is not successful .
  */
-
 uint32_t * reserve_words(size_t length);
 
 /**
- * @brief Clears elements in a data array
+ * @brief This function frees a dynamic memory which is allocated
+ *  by my_reverse function
  *
- * Given a pointer to a char data set, this will set a clear a number
- * of elements given the size provided. Clear means to set to zero.
  *
- * @param ptr Pointer to data array
- * @param size Number of elements to set to zero
+ * @param ptr Pointer to allocated memory
  *
  * @return void.
  */
-
 void free_words(uint32_t * src);
 
 

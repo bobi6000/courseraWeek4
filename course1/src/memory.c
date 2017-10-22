@@ -52,16 +52,17 @@ void clear_all(char * ptr, unsigned int size){
 
 uint8_t* my_memmove(uint8_t *src, uint8_t *dst, size_t length){
 	int8_t  pos=0U;
-	uint8_t temp[length];
-printf("dlugosc= %d\n",length);
- for(pos=length-1;pos>=0;pos--){
+	uint32_t *temp;
+
+	temp=(uint32_t*)malloc(sizeof *temp * length);
+ for(pos=0;pos<length;pos++)
 	*(temp+pos)=*(src+pos);
-	printf("pozycja wzg poczatku %d\n",pos);
-	}
+
  for(pos=0;pos<length;pos++)
 	*(dst+pos)=*(temp+pos);
 
-	return dst;
+	free(temp);
+ return dst;
 }
 
 uint8_t * my_memcopy(uint8_t * src, uint8_t * dst, size_t length){
@@ -89,7 +90,7 @@ uint8_t * my_memzero(uint8_t * src, size_t length){
 }
 
 uint8_t * my_reverse(uint8_t * src, size_t length){
-	uint32_t temp=0U;
+	uint8_t temp=0U;
 	int8_t pos=0U;
 
 	for(pos=0U;pos<length;pos++){
@@ -106,7 +107,7 @@ uint32_t * reserve_words(size_t length){
 	uint32_t * ptr;
 
 	ptr= (uint32_t*)malloc(length);
-
+	if(!ptr)return NULL;
 	return ptr;
 }
 

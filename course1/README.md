@@ -1,8 +1,8 @@
 /***
-***Week 2 - Application Assigment
-***Student name: Pawel
+***Week 4 - Peer-graded Assignment
+***Student name: Paul
 ***Country: Poland
-***Desciption: Simple application
-***Date: 11.08.2017
-***Repository: (gihub) https://github.com/bobi6000/courseWeek2.git
+***Description: All files which were edited in the course time
+***Date: 22.10.2017
+***Repository: (gihub) https://github.com/bobi6000/courseraWeek4.git
 ***/
